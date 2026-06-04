@@ -912,7 +912,7 @@ proxy-groups:
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
-    filter: "🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|\\bJP(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Japan|JAPAN|JPN|NRT|HND|KIX|TYO|OSA|关西|Kansai|KANSAI"
+    filter: "🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|\\bJP(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Japan|JAPAN|JPN|NRT|HND|KIX|TYO|OSA|关西|Kansai|KANSAI"
     use:
       - Sub-Store
 
@@ -1002,7 +1002,7 @@ proxy-groups:
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
-    filter: "🇷🇺|俄罗斯|莫斯科|圣彼得堡|新西伯利亚|海参崴|符拉迪沃斯托克|哈巴罗夫斯克|伯力|\\bRU(?:[-_ ]?\\d+)?\\b|Russia"
+    filter: "🇷🇺|(?<!白)俄罗斯|(?<!白)俄|莫斯科|圣彼得堡|新西伯利亚|海参崴|符拉迪沃斯托克|哈巴罗夫斯克|伯力|\\bRU(?:[-_ ]?\\d+)?\\b|Russia"
     use:
       - Sub-Store
 
@@ -1047,6 +1047,7 @@ proxy-groups:
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
+    filter: "^(?!.*(港|\\bHK|hk|Hong Kong|美|\\bUS|United States|USA|日本|\\bJP|Japan|新加坡|\\bSG|Singapore|台|\\bTW|Taiwan|\\bKR|Korea|韩|加拿大|\\bCA|Canada|英国|\\bUK|Britain|法国|\\bFR|France|德国|\\bDE|Germany|荷兰|\\bNL|Netherlands|土耳其|\\bTR|Turkey|俄罗斯|\\bRU|Russia|澳大利亚|澳洲|\\bAU|Australia|印尼|印度尼西亚|雅加达|\\bID|Indonesia|印度|孟买|\\bIN|India|马来西亚|吉隆坡|\\bMY|Malaysia|家宽|住宅|Residential|低倍)).*"
     use:
       - Sub-Store
 
@@ -1064,7 +1065,7 @@ proxy-groups:
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
-    filter: "低倍率|低倍|0\\.\\d+(?:x|倍)?|倍率[:： ]?0?\\.\\d+"
+    filter: "低倍率|低倍|(?<![\\d\\.])0?\\.\\d+(?![0-9])(?:x|倍)?|倍率[:： ]?0?\\.\\d+"
     use:
       - Sub-Store
 
