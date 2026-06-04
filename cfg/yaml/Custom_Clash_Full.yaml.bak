@@ -1170,342 +1170,293 @@ rule-providers:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs"
     interval: 86400
   Custom_Direct_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs"
     interval: 86400
   Custom_Proxy_Domain:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs"
     interval: 86400
   Custom_Proxy_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs"
     interval: 86400
   Steam_CDN_Domain:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs"
     interval: 86400
   Steam_CDN_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs"
     interval: 86400
   Custom_Port_Direct:
     type: http
     behavior: classical
     format: yaml
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
     interval: 86400
   WiFiCall:
     type: http
     behavior: classical
     format: yaml
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/WiFiCall.yaml"
     interval: 86400
   Google_CN:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs"
     interval: 86400
   Game_CN:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs"
     interval: 86400
   Game_Download:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download.mrs"
     interval: 86400
   Public_Tracker:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-public-tracker.mrs"
     interval: 86400
   Communication:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-communication.mrs"
     interval: 86400
   Social_Media:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-social-media-!cn.mrs"
     interval: 86400
   Talkatone:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/talkatone.mrs"
     interval: 86400
   OpenAI:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
     interval: 86400
   OneDrive:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs"
     interval: 86400
   Bing:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bing.mrs"
     interval: 86400
   AI:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs"
     interval: 86400
   GitHub:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
     interval: 86400
   Speedtest:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs"
     interval: 86400
   Steam:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs"
     interval: 86400
   YouTube:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs"
     interval: 86400
   Apple_TV:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-tvplus.mrs"
     interval: 86400
   Apple:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
     interval: 86400
   Microsoft:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
     interval: 86400
   GoogleFCM:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/googlefcm.mrs"
     interval: 86400
   Google:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
     interval: 86400
   TikTok:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs"
     interval: 86400
   Netflix:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
     interval: 86400
   Disney:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.mrs"
     interval: 86400
   HBO:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/hbo.mrs"
     interval: 86400
   PrimeVideo:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/primevideo.mrs"
     interval: 86400
   Emby:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-emby.mrs"
     interval: 86400
   Spotify:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs"
     interval: 86400
   Bahamut:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bahamut.mrs"
     interval: 86400
   Games:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs"
     interval: 86400
   Entertainment:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-entertainment.mrs"
     interval: 86400
   PT:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-pt.mrs"
     interval: 86400
   PayPal:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.mrs"
     interval: 86400
   Ecommerce:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ecommerce.mrs"
     interval: 86400
   GFW:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs"
     interval: 86400
   CN_Domain:
     type: http
     behavior: domain
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs"
     interval: 86400
   Telegram_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
     interval: 86400
   Twitter_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs"
     interval: 86400
   Facebook_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/facebook.mrs"
     interval: 86400
   Google_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
     interval: 86400
   Netflix_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/netflix.mrs"
     interval: 86400
   CN_IP:
     type: http
     behavior: ipcidr
     format: mrs
-    proxy: DIRECT
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs"
     interval: 86400
