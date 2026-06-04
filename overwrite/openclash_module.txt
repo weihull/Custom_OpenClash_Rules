@@ -9,115 +9,183 @@
 # 4. 保存并应用
 #
 # 功能特性：
-# - Fake-IP 模式（配合规则设置中的自定义 DNS）
+# - Fake-IP TUN 模式（性能最优，全局流量接管）
 # - WiFiCall 分流支持（英国/美国/香港/新加坡/新西兰）
 # - Meta 核心，启用域名嗅探和 TCP 并发
+# - IPv6 完整支持（TUN 模式自动处理 UDP）
 # - 自动更新 GeoIP/GeoSite 数据
-# - 启用 LightGBM 智能选择模型
+# - 每日自动更新配置文件（凌晨 6 点）
 # ==========================================================
 
 [General]
-# 配置文件路径
+# 配置文件路径（指定要覆写的配置文件位置）
 CONFIG_FILE = /etc/openclash/config/Custom_Clash_Full.yaml
 
-# 核心类型：Meta 核心
+# 核心类型：Meta 核心（支持更多高级特性，如域名嗅探）
 CORE_TYPE = Meta
 
 # --- DNS 相关 ---
-# 使用自定义 DNS（在覆写设置 -> DNS 设置中配置）
+# DNS 重定向模式：1=Dnsmasq Redirect, 2=Firewall Redirect, 0=禁用
 ENABLE_REDIRECT_DNS = 1
+# 启用自定义 DNS（使用插件内置规则）
 ENABLE_CUSTOM_DNS = 1
+# 自动追加 default-nameserver DNS（0=禁用）
 APPEND_DEFAULT_DNS = 0
+# 追加上游分配的 DNS（0=禁用，不使用运营商 DNS）
 APPEND_WAN_DNS = 0
+# 启用 Fake-IP 缓存（持久化存储，重启后保留）
 STORE_FAKEIP = 1
+# 启用 Fake-IP-Filter（插件内置规则）
 CUSTOM_FAKEIP_FILTER = 1
+# Fake-IP 过滤模式：blacklist=黑名单，whitelist=白名单
 CUSTOM_FAKEIP_FILTER_MODE = blacklist
+# Fake-IP 地址段（用于返回虚假 IP）
 FAKEIP_RANGE = 198.18.0.1/16
+# DNS 查询是否遵循规则（0=不遵循，1=遵循）
 ENABLE_RESPECT_RULES = 0
+# 自定义 Nameserver-Policy（0=不覆写）
 CUSTOM_NAME_POLICY = 0
+# 自定义 Hosts（0=不覆写）
 CUSTOM_HOST = 0
+# 自定义 Fallback-Filter（0=不覆写）
 CUSTOM_FALLBACK_FILTER = 0
 
 # --- IPv6 相关 ---
+# 启用 IPv6 支持
 IPV6_ENABLE = 1
+# 启用 IPv6 DNS 解析
 IPV6_DNS = 1
+# IPv6 代理模式：0=TProxy, 1=Redirect, 2=TUN, 3=Mix（TUN 模式下推荐使用 2）
 IPV6_MODE = 2
+# 启用 IPv6 UDP 代理（TUN 模式下此项无效，TUN 自动处理 IPv6 UDP）
 ENABLE_V6_UDP_PROXY = 0
 
 # --- 代理与模式 ---
-EN_MODE = fake-ip
+# 运行模式：fake-ip-tun=Fake-IP TUN 模式（性能最好），redir-host=真实 IP 模式
+EN_MODE = fake-ip-tun
+# 启用 UDP 代理（TUN 模式下此项无效，TUN 自动处理 UDP）
 ENABLE_UDP_PROXY = 1
+# 禁用 UDP QUIC 协议（防止 HTTP/3 绕过代理）
 DISABLE_UDP_QUIC = 1
+# 路由器自身流量是否走代理（1=路由器自身也走代理）
 ROUTER_SELF_PROXY = 1
+# 代理模式：rule=规则模式，global=全局模式，direct=直连模式
 PROXY_MODE = rule
 
 # --- 防火墙与访问控制 ---
+# 仅允许内网访问（0=禁用，1=启用）
 INTRANET_ALLOWED = 0
+# 旁路网关兼容模式（0=禁用）
 BYPASS_GATEWAY_COMPATIBLE = 0
+# 绕过常用端口（0=禁用，或填写端口列表）
 COMMON_PORTS = 0
 
 # --- 分流相关 ---
+# IPv4 大陆 IP 路由：0=禁用，1=绕过大陆 IP，2=回国模式
 CHINA_IP_ROUTE = 1
+# IPv6 大陆 IP 路由：0=禁用，1=绕过大陆 IP，2=回国模式
 CHINA_IP6_ROUTE = 1
+# 大陆 IP 列表自动更新（1=启用）
 CHNR_AUTO_UPDATE = 1
+# 大陆 IP 更新星期：*=每天，0-6=星期几（0=星期天）
 CHNR_UPDATE_WEEK_TIME = *
+# 大陆 IP 更新小时：0-23 或 *
 CHNR_UPDATE_DAY_TIME = 2
 
+# 启用域名嗅探（Meta 核心特性，从数据包中提取真实域名）
 ENABLE_META_SNIFFER = 1
+# 启用自定义嗅探规则（插件内置规则）
 ENABLE_META_SNIFFER_CUSTOM = 1
+# 强制嗅探纯 IP 连接（即使没有域名信息也尝试嗅探）
 ENABLE_META_SNIFFER_PURE_IP = 1
 
+# 启用 TCP 并发（同时向多个代理发起连接，选择最快的）
 ENABLE_TCP_CONCURRENT = 1
+# 进程查找模式：off=关闭，always=总是，strict=严格模式（Meta 核心推荐）
 FIND_PROCESS_MODE = strict
+# 启用统一延迟计算（URL-Test/Fallback 组使用统一的延迟算法）
 ENABLE_UNIFIED_DELAY = 1
 
+# 仅代理命中规则的流量（0=所有流量都走代理策略）
 ENABLE_RULE_PROXY = 0
+# 启用用户自定义规则（使用插件规则）
 ENABLE_CUSTOM_CLASH_RULES = 1
 
 # --- 性能优化 ---
+# URL-Test 策略组切换容差（毫秒，延迟差异小于此值不切换节点）
 TOLERANCE = 50
+# 测速（连通性）间隔（秒，0=不覆写）
 URLTEST_INTERVAL_MOD = 300
 
 # --- Smart 核心相关（如果使用 Smart 核心）---
-# 启用 LightGBM 智能选择
+# 启用 LightGBM 智能选择（机器学习自动选择最优节点）
 # AUTO_SMART_SWITCH = 0
 # SMART_ENABLE_LGBM = 1
 # LGBM_AUTO_UPDATE = 1
 # LGBM_UPDATE_INTERVAL = 24
 
 # --- 数据库加载相关 ---
+# 启用 GEOIP DAT 数据库格式（兼容旧版本）
 ENABLE_GEOIP_DAT = 1
+# Geo 数据加载模式：memconservative=省内存，standard=标准
 GEODATA_LOADER = standard
+# GeoIP MMDB 数据自动更新（新格式数据库）
 GEO_AUTO_UPDATE = 1
+# GeoIP MMDB 更新星期：*=每天，0-6=星期几
 GEO_UPDATE_WEEK_TIME = *
+# GeoIP MMDB 更新小时：0-23
 GEO_UPDATE_DAY_TIME = 4
+# GeoIP Dat 数据自动更新（旧格式数据库）
 GEOIP_AUTO_UPDATE = 1
+# GeoIP Dat 更新星期
 GEOIP_UPDATE_WEEK_TIME = *
+# GeoIP Dat 更新小时
 GEOIP_UPDATE_DAY_TIME = 4
+# GeoSite 数据自动更新（域名规则数据库）
 GEOSITE_AUTO_UPDATE = 1
+# GeoSite 更新星期
 GEOSITE_UPDATE_WEEK_TIME = *
+# GeoSite 更新小时
 GEOSITE_UPDATE_DAY_TIME = 4
+# GeoASN 数据自动更新（AS 号段数据库，用于按运营商分流）
 GEOASN_AUTO_UPDATE = 1
+# GeoASN 更新星期
 GEOASN_UPDATE_WEEK_TIME = *
+# GeoASN 更新小时
 GEOASN_UPDATE_DAY_TIME = 4
 
 # --- 其它功能 ---
+# 小闪存模式（减少写入次数，适用于路由器小闪存，0=禁用）
 SMALL_FLASH_MEMORY = 0
+# 禁用 QUIC GO GSO（解决某些环境下的兼容性问题，1=禁用）
 DISABLE_QUIC_GO_GSO = 1
+# 延时启动秒数（0=禁用，路由器启动后延迟几秒再启动 OpenClash）
 DELAY_START = 0
+# 跳过代理地址（不代理到代理服务器的流量，1=启用）
 SKIP_PROXY_ADDRESS = 1
 
 # --- 订阅信息 ---
+# 订阅信息 URL（使用环境变量 EN_KEY）
 SUB_INFO_URL = $EN_KEY
 
 # --- 自动下载配置文件 ---
-# 每天凌晨 6 点自动更新配置文件
+# 每天凌晨 6 点自动从 GitHub 更新配置文件
+# url: 配置文件下载地址
+# path: 保存路径
+# cron: 定时任务（分 时 日 月 周）
+# force: 强制覆盖
+# restart: 下载后重启 OpenClash
 DOWNLOAD_FILE = url=https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/cfg/yaml/Custom_Clash_Full.yaml, path=/etc/openclash/config/Custom_Clash_Full.yaml, cron=0 6 * * *, force=true, restart=true
 
 # ==========================================================
 # 覆写配置 - 自动替换订阅链接
 # ==========================================================
 [Overwrite]
-# 将配置文件中的 proxy-providers 订阅链接替换为环境变量 EN_KEY
-# EN_KEY 需要在模块设置时指定
+# 使用 Ruby 脚本编辑配置文件
+# 将配置文件中 proxy-providers.all.url 的值替换为环境变量 $EN_KEY
+# $CONFIG_FILE: 配置文件路径
+# ['proxy-providers']: YAML 路径 - proxy-providers 段
+# "all": 提供者名称
+# ['url']: 要修改的键
+# $EN_KEY: 新值（你的订阅链接）
 ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "all" "['url']" "$EN_KEY"
