@@ -1089,154 +1089,374 @@ proxy-providers:
 # 规则配置
 rules:
   # WiFiCall 规则（优先级最高）
-  - RULE-SET,wificall,📞 WiFiCall
+  - RULE-SET,WiFiCall,📞 WiFiCall
 
   # 本地地址和域名直连
   - GEOSITE,private,🎯 全球直连
   - GEOIP,private,🎯 全球直连,no-resolve
 
-  # 本项目收录的直连规则（需要下载到本地或使用rule-providers）
-  - RULE-SET,custom-direct-domain,🎯 全球直连
-  - RULE-SET,custom-direct-ip,🎯 全球直连
+  # 本项目收录的直连规则
+  - RULE-SET,Custom_Direct_Domain,🎯 全球直连
+  - RULE-SET,Custom_Direct_IP,🎯 全球直连,no-resolve
 
   # 本项目收录的代理规则
-  - RULE-SET,custom-proxy-domain,🚀 手动选择
-  - RULE-SET,custom-proxy-ip,🚀 手动选择
+  - RULE-SET,Custom_Proxy_Domain,🚀 手动选择
+  - RULE-SET,Custom_Proxy_IP,🚀 手动选择,no-resolve
 
-  # 谷歌在国内可用的域名直连
-  - GEOSITE,google-cn,🎯 全球直连
+  # 国内直连与下载优化
+  - RULE-SET,Google_CN,🎯 全球直连
+  - RULE-SET,Game_CN,🎯 全球直连
+  - RULE-SET,Steam_CDN_Domain,🎯 全球直连
+  - RULE-SET,Steam_CDN_IP,🎯 全球直连,no-resolve
+  - RULE-SET,Game_Download,🎯 全球直连
+  - RULE-SET,Public_Tracker,🎯 全球直连
 
-  # 国内游戏域名直连
-  - GEOSITE,category-games@cn,🎯 全球直连
-
-  # Steam 下载 CDN 直连
-  - RULE-SET,steam-cdn,🎯 全球直连
-
-  # 各大游戏平台下载域名直连
-  - GEOSITE,category-game-platforms-download,🎯 全球直连
-
-  # BT Tracker 相关域名直连
-  - GEOSITE,category-public-tracker,🎯 全球直连
-
-  # 即时通讯
-  - GEOSITE,category-communication,💬 即时通讯
-
-  # 社交媒体
-  - GEOSITE,category-social-media-!cn,🌐 社交媒体
+  # 通讯与社交
+  - RULE-SET,Communication,💬 即时通讯
+  - RULE-SET,Social_Media,🌐 社交媒体
+  - RULE-SET,Telegram_IP,💬 即时通讯,no-resolve
+  - RULE-SET,Twitter_IP,🌐 社交媒体,no-resolve
+  - RULE-SET,Facebook_IP,🌐 社交媒体,no-resolve
 
   # 应用服务
-  - GEOSITE,talkatone,📞 Talkatone
-  - GEOSITE,openai,🤖 ChatGPT
-  - GEOSITE,onedrive,💾 OneDrive
-  - GEOSITE,bing,🤖 Copilot
-  - GEOSITE,category-ai-!cn,🤖 AI服务
-  - GEOSITE,github,🚀 GitHub
-
-  # 测速工具
-  - GEOSITE,category-speedtest,🚀 测速工具
+  - RULE-SET,Talkatone,📞 Talkatone
+  - RULE-SET,OpenAI,🤖 ChatGPT
+  - RULE-SET,OneDrive,💾 OneDrive
+  - RULE-SET,Bing,🤖 Copilot
+  - RULE-SET,AI,🤖 AI服务
+  - RULE-SET,GitHub,🚀 GitHub
+  - RULE-SET,Speedtest,🚀 测速工具
 
   # 媒体服务
-  - GEOSITE,steam,🎮 Steam
-  - GEOSITE,youtube,📹 YouTube
-  - GEOSITE,apple-tvplus,🎥 AppleTV+
-  - GEOSITE,apple,🍎 苹果服务
-  - GEOSITE,microsoft,Ⓜ️ 微软服务
-  - GEOSITE,googlefcm,📢 谷歌FCM
-  - GEOSITE,google,🇬 谷歌服务
-  - GEOSITE,tiktok,🎶 TikTok
-  - GEOSITE,netflix,🎥 Netflix
-  - GEOSITE,disney,🎥 DisneyPlus
-  - GEOSITE,hbo,🎥 HBO
-  - GEOSITE,primevideo,🎥 PrimeVideo
-  - GEOSITE,category-emby,🎥 Emby
-  - GEOSITE,spotify,🎻 Spotify
-  - GEOSITE,bahamut,📺 Bahamut
+  - RULE-SET,Steam,🎮 Steam
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,Apple_TV,🎥 AppleTV+
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,Google,🇬 谷歌服务
+  - RULE-SET,Google_IP,🇬 谷歌服务,no-resolve
+  - RULE-SET,TikTok,🎶 TikTok
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,Netflix_IP,🎥 Netflix,no-resolve
+  - RULE-SET,Disney,🎥 DisneyPlus
+  - RULE-SET,HBO,🎥 HBO
+  - RULE-SET,PrimeVideo,🎥 PrimeVideo
+  - RULE-SET,Emby,🎥 Emby
+  - RULE-SET,Spotify,🎻 Spotify
+  - RULE-SET,Bahamut,📺 Bahamut
 
-  # 游戏平台
-  - GEOSITE,category-games,🎮 游戏平台
-
-  # 国外媒体
-  - GEOSITE,category-entertainment,🌎 国外媒体
-
-  # PT站点
-  - GEOSITE,category-pt,⏬ PT站点
-
-  # PayPal
-  - GEOSITE,paypal,💳 PayPal
-
-  # 国外电商
-  - GEOSITE,category-ecommerce,🛒 国外电商
-
-  # GFW 列表
-  - GEOSITE,gfw,🚀 手动选择
-
-  # GFW 列表
-  - GEOSITE,gfw,🚀 手动选择
-
-  # IP 规则
-  - GEOIP,telegram,💬 即时通讯,no-resolve
-  - GEOIP,twitter,🌐 社交媒体,no-resolve
-  - GEOIP,facebook,🌐 社交媒体,no-resolve
-  - GEOIP,google,🇬 谷歌服务,no-resolve
-  - GEOIP,netflix,🎥 Netflix,no-resolve
+  # 分类规则
+  - RULE-SET,Games,🎮 游戏平台
+  - RULE-SET,Entertainment,🌎 国外媒体
+  - RULE-SET,PT,⏬ PT站点
+  - RULE-SET,PayPal,💳 PayPal
+  - RULE-SET,Ecommerce,🛒 国外电商
+  - RULE-SET,GFW,🚀 手动选择
 
   # 国内域名和IP直连
-  - GEOSITE,cn,🎯 全球直连
-  - GEOIP,cn,🎯 全球直连,no-resolve
+  - RULE-SET,CN_Domain,🎯 全球直连
+  - RULE-SET,CN_IP,🎯 全球直连,no-resolve
 
   # 非标端口
-  - RULE-SET,custom-port-direct,🔀 非标端口
+  - RULE-SET,Custom_Port_Direct,🔀 非标端口
 
   # 漏网之鱼
   - MATCH,🐟 漏网之鱼
 
 # 规则集配置
 rule-providers:
-  custom-direct-domain:
+  Custom_Direct_Domain:
     type: http
     behavior: domain
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml
-    path: ./ruleset/custom-direct-domain.yaml
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs"
     interval: 86400
-
-  custom-direct-ip:
+  Custom_Direct_IP:
     type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml
-    path: ./ruleset/custom-direct-ip.yaml
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs"
     interval: 86400
-
-  custom-proxy-domain:
+  Custom_Proxy_Domain:
     type: http
     behavior: domain
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml
-    path: ./ruleset/custom-proxy-domain.yaml
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs"
     interval: 86400
-
-  custom-proxy-ip:
+  Custom_Proxy_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs"
+    interval: 86400
+  Steam_CDN_Domain:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs"
+    interval: 86400
+  Steam_CDN_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs"
+    interval: 86400
+  Custom_Port_Direct:
     type: http
     behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml
-    path: ./ruleset/custom-proxy-ip.yaml
+    format: yaml
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
     interval: 86400
-
-  steam-cdn:
+  WiFiCall:
     type: http
     behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
-    path: ./ruleset/steam-cdn.yaml
+    format: yaml
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/WiFiCall.yaml"
     interval: 86400
-
-  custom-port-direct:
+  Google_CN:
     type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
-    path: ./ruleset/custom-port-direct.yaml
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs"
     interval: 86400
-
-  wificall:
+  Game_CN:
     type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/WiFiCall.yaml
-    path: ./ruleset/wificall.yaml
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs"
+    interval: 86400
+  Game_Download:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download.mrs"
+    interval: 86400
+  Public_Tracker:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-public-tracker.mrs"
+    interval: 86400
+  Communication:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-communication.mrs"
+    interval: 86400
+  Social_Media:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-social-media-!cn.mrs"
+    interval: 86400
+  Talkatone:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/talkatone.mrs"
+    interval: 86400
+  OpenAI:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs"
+    interval: 86400
+  Bing:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bing.mrs"
+    interval: 86400
+  AI:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs"
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    interval: 86400
+  Speedtest:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs"
+    interval: 86400
+  Steam:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs"
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs"
+    interval: 86400
+  Apple_TV:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-tvplus.mrs"
+    interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    interval: 86400
+  GoogleFCM:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/googlefcm.mrs"
+    interval: 86400
+  Google:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs"
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
+    interval: 86400
+  Disney:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.mrs"
+    interval: 86400
+  HBO:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/hbo.mrs"
+    interval: 86400
+  PrimeVideo:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/primevideo.mrs"
+    interval: 86400
+  Emby:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-emby.mrs"
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs"
+    interval: 86400
+  Bahamut:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bahamut.mrs"
+    interval: 86400
+  Games:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs"
+    interval: 86400
+  Entertainment:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-entertainment.mrs"
+    interval: 86400
+  PT:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-pt.mrs"
+    interval: 86400
+  PayPal:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.mrs"
+    interval: 86400
+  Ecommerce:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ecommerce.mrs"
+    interval: 86400
+  GFW:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs"
+    interval: 86400
+  CN_Domain:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs"
+    interval: 86400
+  Telegram_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
+    interval: 86400
+  Twitter_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs"
+    interval: 86400
+  Facebook_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/facebook.mrs"
+    interval: 86400
+  Google_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
+    interval: 86400
+  Netflix_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/netflix.mrs"
+    interval: 86400
+  CN_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs"
     interval: 86400

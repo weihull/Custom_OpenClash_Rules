@@ -186,6 +186,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     # 节点过滤器（正则表达式），排除包含这些关键词的节点：群、官网、订阅、流量、到期、USED、EXPIRE等
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:  # 从哪些provider加载节点
@@ -210,6 +211,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
   - name: "🌐 社交媒体"
     type: select
@@ -221,6 +223,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     - "🎯 全球直连"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
@@ -237,6 +240,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
   - name: "🤖 ChatGPT"
     type: select
@@ -248,6 +252,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -262,6 +267,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -276,6 +282,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -290,6 +297,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -304,6 +312,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -318,6 +327,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -332,6 +342,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
@@ -347,6 +358,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -361,6 +373,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -375,6 +388,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -389,6 +403,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -411,6 +426,7 @@ proxy-groups:
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -425,6 +441,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     - "🎯 全球直连"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
@@ -440,6 +457,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
   - name: "🇬 谷歌服务"
     type: select
@@ -451,6 +469,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
   - name: "🍎 苹果服务"
     type: select
@@ -463,6 +482,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
   - name: "Ⓜ️ 微软服务"
     type: select
@@ -475,6 +495,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
 
   - name: "🎮 游戏平台"
@@ -488,6 +509,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
 
   - name: "🎮 Steam"
     type: select
@@ -500,6 +522,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -515,6 +538,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -530,6 +554,7 @@ proxy-groups:
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
     - "🇼🇸 台湾节点"
+    - "🇩🇪 德国节点"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -585,6 +610,15 @@ proxy-groups:
     interval: 300
     tolerance: 50
 
+  - name: "🇩🇪 德国节点"
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    filter: '(?i)(🇩🇪|德国|Germany|GERMANY|\bDE(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|DEU|柏林|法兰克福|慕尼黑|Munich|MUC)'
+    use:
+      - provider1
+    interval: 300
+    tolerance: 50
+
   - name: "🎯 全球直连"
     type: url-test
     url: http://wifi.vivo.com.cn/generate_204
@@ -603,44 +637,44 @@ rules:
   - "RULE-SET,Custom_Direct_Port,🎯 全球直连"  # 自定义直连端口
   - "RULE-SET,Custom_Proxy_Domain,🚀 手动选择"  # 自定义代理域名
   - "RULE-SET,Custom_Proxy_IP,🚀 手动选择,no-resolve"  # 自定义代理IP
-  - "GEOSITE,google-cn,🎯 全球直连"  # Google中国服务
-  - "GEOSITE,category-games@cn,🎯 全球直连"  # 国内游戏
-  - "RULE-SET,Steam_CDN_Domain,🎯 全球直连"  # Steam CDN
-  - "RULE-SET,Steam_CDN_IP,🎯 全球直连,no-resolve"  # Steam CDN
-  - "GEOSITE,category-game-platforms-download,🎯 全球直连"  # 游戏平台下载
-  - "GEOSITE,category-public-tracker,🎯 全球直连"  # BT Tracker
-  - "GEOSITE,category-communication,💬 即时通讯"  # 即时通讯
-  - "GEOSITE,category-social-media-!cn,🌐 社交媒体"  # 国外社交媒体
-  - "GEOSITE,openai,🤖 ChatGPT"  # OpenAI
-  - "GEOSITE,category-ai-!cn,🤖 AI服务"  # AI服务
-  - "GEOSITE,github,🚀 GitHub"  # GitHub
-  - "GEOSITE,category-speedtest,🚀 测速工具"  # 测速工具
-  - "GEOSITE,steam,🎮 Steam"  # Steam
-  - "GEOSITE,youtube,📹 YouTube"  # YouTube
-  - "GEOSITE,apple-tvplus,🎥 AppleTV+"  # Apple TV+
-  - "GEOSITE,apple,🍎 苹果服务"  # 苹果服务
-  - "GEOSITE,microsoft,Ⓜ️ 微软服务"  # 微软服务
-  - "GEOSITE,googlefcm,📢 谷歌FCM"  # Google FCM推送
-  - "GEOSITE,google,🇬 谷歌服务"  # Google服务
-  - "GEOSITE,tiktok,🎶 TikTok"  # TikTok
-  - "GEOSITE,netflix,🎥 Netflix"  # Netflix
-  - "GEOSITE,disney,🎥 DisneyPlus"  # Disney+
-  - "GEOSITE,hbo,🎥 HBO"  # HBO
-  - "GEOSITE,primevideo,🎥 PrimeVideo"  # Prime Video
-  - "GEOSITE,category-emby,🎥 Emby"  # Emby
-  - "GEOSITE,spotify,🎻 Spotify"  # Spotify
-  - "GEOSITE,bahamut,📺 Bahamut"  # 巴哈姆特
-  - "GEOSITE,category-games,🎮 游戏平台"  # 游戏平台
-  - "GEOSITE,category-entertainment,🌎 国外媒体"  # 国外媒体
-  - "GEOSITE,category-ecommerce,🛒 国外电商"  # 国外电商
-  - "GEOSITE,gfw,🚀 手动选择"  # GFW列表
-  - "GEOIP,telegram,💬 即时通讯,no-resolve"  # Telegram IP
-  - "GEOIP,twitter,🌐 社交媒体,no-resolve"  # Twitter IP
-  - "GEOIP,facebook,🌐 社交媒体,no-resolve"  # Facebook IP
-  - "GEOIP,google,🇬 谷歌服务,no-resolve"  # Google IP
-  - "GEOIP,netflix,🎥 Netflix,no-resolve"  # Netflix IP
-  - "GEOSITE,cn,🎯 全球直连"  # 中国域名
-  - "GEOIP,cn,🎯 全球直连,no-resolve"  # 中国IP
+  - "RULE-SET,Google_CN,🎯 全球直连"  # Google中国服务
+  - "RULE-SET,Game_CN,🎯 全球直连"  # 国内游戏
+  - "RULE-SET,Steam_CDN_Domain,🎯 全球直连"  # Steam CDN域名
+  - "RULE-SET,Steam_CDN_IP,🎯 全球直连,no-resolve"  # Steam CDN IP
+  - "RULE-SET,Game_Download,🎯 全球直连"  # 游戏平台下载
+  - "RULE-SET,Public_Tracker,🎯 全球直连"  # BT Tracker
+  - "RULE-SET,Communication,💬 即时通讯"  # 即时通讯
+  - "RULE-SET,Social_Media,🌐 社交媒体"  # 国外社交媒体
+  - "RULE-SET,OpenAI,🤖 ChatGPT"  # OpenAI
+  - "RULE-SET,AI,🤖 AI服务"  # AI服务
+  - "RULE-SET,GitHub,🚀 GitHub"  # GitHub
+  - "RULE-SET,Speedtest,🚀 测速工具"  # 测速工具
+  - "RULE-SET,Steam,🎮 Steam"  # Steam
+  - "RULE-SET,YouTube,📹 YouTube"  # YouTube
+  - "RULE-SET,Apple_TV,🎥 AppleTV+"  # Apple TV+
+  - "RULE-SET,Apple,🍎 苹果服务"  # 苹果服务
+  - "RULE-SET,Microsoft,Ⓜ️ 微软服务"  # 微软服务
+  - "RULE-SET,GoogleFCM,📢 谷歌FCM"  # Google FCM推送
+  - "RULE-SET,Google,🇬 谷歌服务"  # Google服务
+  - "RULE-SET,TikTok,🎶 TikTok"  # TikTok
+  - "RULE-SET,Netflix,🎥 Netflix"  # Netflix
+  - "RULE-SET,Disney,🎥 DisneyPlus"  # Disney+
+  - "RULE-SET,HBO,🎥 HBO"  # HBO
+  - "RULE-SET,PrimeVideo,🎥 PrimeVideo"  # Prime Video
+  - "RULE-SET,Emby,🎥 Emby"  # Emby
+  - "RULE-SET,Spotify,🎻 Spotify"  # Spotify
+  - "RULE-SET,Bahamut,📺 Bahamut"  # 巴哈姆特
+  - "RULE-SET,Games,🎮 游戏平台"  # 游戏平台
+  - "RULE-SET,Entertainment,🌎 国外媒体"  # 国外媒体
+  - "RULE-SET,Ecommerce,🛒 国外电商"  # 国外电商
+  - "RULE-SET,GFW,🚀 手动选择"  # GFW列表
+  - "RULE-SET,Telegram_IP,💬 即时通讯,no-resolve"  # Telegram IP
+  - "RULE-SET,Twitter_IP,🌐 社交媒体,no-resolve"  # Twitter IP
+  - "RULE-SET,Facebook_IP,🌐 社交媒体,no-resolve"  # Facebook IP
+  - "RULE-SET,Google_IP,🇬 谷歌服务,no-resolve"  # Google IP
+  - "RULE-SET,Netflix_IP,🎥 Netflix,no-resolve"  # Netflix IP
+  - "RULE-SET,CN_Domain,🎯 全球直连"  # 中国域名
+  - "RULE-SET,CN_IP,🎯 全球直连,no-resolve"  # 中国IP
   - "RULE-SET,Custom_Port_Direct,🔀 非标端口"  # 非标端口
   - "MATCH,🐟 漏网之鱼"  # 兜底规则
 
@@ -648,58 +682,267 @@ rules:
 # 从外部URL加载规则集。behavior: domain=域名,ipcidr=IP,classical=混合
 # interval=更新间隔(秒),format: yaml=文本,mrs=二进制(性能更好)
 rule-providers:
-  Custom_Port_Direct:
-    behavior: classical  # 混合类型（包含多种规则）
-    interval: 10800  # 3小时
-    type: http
-    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
-    format: yaml
-
   Custom_Direct_Domain:
-    behavior: domain  # 仅域名
-    interval: 10800
     type: http
+    behavior: domain
+    format: mrs
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs"
-    format: mrs  # 二进制格式
-
+    interval: 86400
   Custom_Direct_IP:
-    behavior: ipcidr  # 仅 IP
-    interval: 10800  # 3小时
     type: http
+    behavior: ipcidr
+    format: mrs
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs"
-    format: mrs  # 二进制格式
-
+    interval: 86400
   Custom_Direct_Port:
-    behavior: classical  # 混合类型（包含多种规则）
-    interval: 10800  # 3小时
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_Port.yaml"
+    behavior: classical
     format: yaml
-
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_Port.yaml"
+    interval: 86400
   Custom_Proxy_Domain:
-    behavior: domain  # 仅域名
-    interval: 10800  # 3小时
     type: http
+    behavior: domain
+    format: mrs
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs"
-    format: mrs  # 二进制格式
-
+    interval: 86400
   Custom_Proxy_IP:
-    behavior: ipcidr  # 仅 IP
-    interval: 10800  # 3小时
     type: http
+    behavior: ipcidr
+    format: mrs
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs"
-    format: mrs  # 二进制格式
-
+    interval: 86400
   Steam_CDN_Domain:
-    behavior: domain  # Steam CDN下载服务器（直连获得更快速度）
-    interval: 10800  # 3小时
     type: http
+    behavior: domain
+    format: mrs
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs"
-    format: mrs  # 二进制格式
-
+    interval: 86400
   Steam_CDN_IP:
-    behavior: ipcidr  # Steam CDN下载服务器（直连获得更快速度）
-    interval: 10800  # 3小时
     type: http
+    behavior: ipcidr
+    format: mrs
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs"
-    format: mrs  # 二进制格式
+    interval: 86400
+  Custom_Port_Direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
+    interval: 86400
+  Google_CN:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs"
+    interval: 86400
+  Game_CN:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs"
+    interval: 86400
+  Game_Download:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download.mrs"
+    interval: 86400
+  Public_Tracker:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-public-tracker.mrs"
+    interval: 86400
+  Communication:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-communication.mrs"
+    interval: 86400
+  Social_Media:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-social-media-!cn.mrs"
+    interval: 86400
+  OpenAI:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
+    interval: 86400
+  AI:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs"
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    interval: 86400
+  Speedtest:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs"
+    interval: 86400
+  Steam:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs"
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs"
+    interval: 86400
+  Apple_TV:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-tvplus.mrs"
+    interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    interval: 86400
+  GoogleFCM:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/googlefcm.mrs"
+    interval: 86400
+  Google:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs"
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
+    interval: 86400
+  Disney:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.mrs"
+    interval: 86400
+  HBO:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/hbo.mrs"
+    interval: 86400
+  PrimeVideo:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/primevideo.mrs"
+    interval: 86400
+  Emby:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-emby.mrs"
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs"
+    interval: 86400
+  Bahamut:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bahamut.mrs"
+    interval: 86400
+  Games:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs"
+    interval: 86400
+  Entertainment:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-entertainment.mrs"
+    interval: 86400
+  Ecommerce:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ecommerce.mrs"
+    interval: 86400
+  GFW:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs"
+    interval: 86400
+  CN_Domain:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs"
+    interval: 86400
+  Telegram_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
+    interval: 86400
+  Twitter_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs"
+    interval: 86400
+  Facebook_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/facebook.mrs"
+    interval: 86400
+  Google_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
+    interval: 86400
+  Netflix_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/netflix.mrs"
+    interval: 86400
+  CN_IP:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs"
+    interval: 86400
