@@ -1,0 +1,123 @@
+# ==========================================================
+# OpenClash 覆写模块配置 - WiFiCall + Custom Rules
+# 项目地址：https://github.com/weihull/Custom_OpenClash_Rules
+#
+# 使用说明：
+# 1. 在 OpenClash 插件设置 -> 模式设置 -> 添加配置模块
+# 2. 粘贴本文件内容
+# 3. 在环境变量中设置 EN_KEY 为你的订阅链接
+# 4. 保存并应用
+#
+# 功能特性：
+# - Fake-IP 模式（配合规则设置中的自定义 DNS）
+# - WiFiCall 分流支持（英国/美国/香港/新加坡/新西兰）
+# - Meta 核心，启用域名嗅探和 TCP 并发
+# - 自动更新 GeoIP/GeoSite 数据
+# - 启用 LightGBM 智能选择模型
+# ==========================================================
+
+[General]
+# 配置文件路径
+CONFIG_FILE = /etc/openclash/config/Custom_Clash_Full.yaml
+
+# 核心类型：Meta 核心
+CORE_TYPE = Meta
+
+# --- DNS 相关 ---
+# 使用自定义 DNS（在覆写设置 -> DNS 设置中配置）
+ENABLE_REDIRECT_DNS = 1
+ENABLE_CUSTOM_DNS = 1
+APPEND_DEFAULT_DNS = 0
+APPEND_WAN_DNS = 0
+STORE_FAKEIP = 1
+CUSTOM_FAKEIP_FILTER = 1
+CUSTOM_FAKEIP_FILTER_MODE = blacklist
+FAKEIP_RANGE = 198.18.0.1/16
+ENABLE_RESPECT_RULES = 0
+CUSTOM_NAME_POLICY = 0
+CUSTOM_HOST = 0
+CUSTOM_FALLBACK_FILTER = 0
+
+# --- IPv6 相关 ---
+IPV6_ENABLE = 1
+IPV6_DNS = 1
+IPV6_MODE = 2
+ENABLE_V6_UDP_PROXY = 0
+
+# --- 代理与模式 ---
+EN_MODE = fake-ip
+ENABLE_UDP_PROXY = 1
+DISABLE_UDP_QUIC = 1
+ROUTER_SELF_PROXY = 1
+PROXY_MODE = rule
+
+# --- 防火墙与访问控制 ---
+INTRANET_ALLOWED = 0
+BYPASS_GATEWAY_COMPATIBLE = 0
+COMMON_PORTS = 0
+
+# --- 分流相关 ---
+CHINA_IP_ROUTE = 1
+CHINA_IP6_ROUTE = 1
+CHNR_AUTO_UPDATE = 1
+CHNR_UPDATE_WEEK_TIME = *
+CHNR_UPDATE_DAY_TIME = 2
+
+ENABLE_META_SNIFFER = 1
+ENABLE_META_SNIFFER_CUSTOM = 1
+ENABLE_META_SNIFFER_PURE_IP = 1
+
+ENABLE_TCP_CONCURRENT = 1
+FIND_PROCESS_MODE = strict
+ENABLE_UNIFIED_DELAY = 1
+
+ENABLE_RULE_PROXY = 0
+ENABLE_CUSTOM_CLASH_RULES = 1
+
+# --- 性能优化 ---
+TOLERANCE = 50
+URLTEST_INTERVAL_MOD = 300
+
+# --- Smart 核心相关（如果使用 Smart 核心）---
+# 启用 LightGBM 智能选择
+# AUTO_SMART_SWITCH = 0
+# SMART_ENABLE_LGBM = 1
+# LGBM_AUTO_UPDATE = 1
+# LGBM_UPDATE_INTERVAL = 24
+
+# --- 数据库加载相关 ---
+ENABLE_GEOIP_DAT = 1
+GEODATA_LOADER = standard
+GEO_AUTO_UPDATE = 1
+GEO_UPDATE_WEEK_TIME = *
+GEO_UPDATE_DAY_TIME = 4
+GEOIP_AUTO_UPDATE = 1
+GEOIP_UPDATE_WEEK_TIME = *
+GEOIP_UPDATE_DAY_TIME = 4
+GEOSITE_AUTO_UPDATE = 1
+GEOSITE_UPDATE_WEEK_TIME = *
+GEOSITE_UPDATE_DAY_TIME = 4
+GEOASN_AUTO_UPDATE = 1
+GEOASN_UPDATE_WEEK_TIME = *
+GEOASN_UPDATE_DAY_TIME = 4
+
+# --- 其它功能 ---
+SMALL_FLASH_MEMORY = 0
+DISABLE_QUIC_GO_GSO = 1
+DELAY_START = 0
+SKIP_PROXY_ADDRESS = 1
+
+# --- 订阅信息 ---
+SUB_INFO_URL = $EN_KEY
+
+# --- 自动下载配置文件 ---
+# 每天凌晨 6 点自动更新配置文件
+DOWNLOAD_FILE = url=https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/cfg/yaml/Custom_Clash_Full.yaml, path=/etc/openclash/config/Custom_Clash_Full.yaml, cron=0 6 * * *, force=true, restart=true
+
+# ==========================================================
+# 覆写配置 - 自动替换订阅链接
+# ==========================================================
+[Overwrite]
+# 将配置文件中的 proxy-providers 订阅链接替换为环境变量 EN_KEY
+# EN_KEY 需要在模块设置时指定
+ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "all" "['url']" "$EN_KEY"
