@@ -182,10 +182,10 @@ DOWNLOAD_FILE = url=https://raw.githubusercontent.com/weihull/Custom_OpenClash_R
 # ==========================================================
 [Overwrite]
 # 使用 Ruby 脚本编辑配置文件
-# 将配置文件中 proxy-providers.all.url 的值替换为环境变量 $EN_KEY
+# 将配置文件中 proxy-providers.Sub-Store.url 的值替换为环境变量 $EN_KEY
 # $CONFIG_FILE: 配置文件路径
 # ['proxy-providers']: YAML 路径 - proxy-providers 段
-# "all": 提供者名称
+# "Sub-Store": 提供者名称
 # ['url']: 要修改的键
 # $EN_KEY: 新值（你的订阅链接）
-ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "all" "['url']" "$EN_KEY"
+ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "Sub-Store" "['url']" "$EN_KEY"
