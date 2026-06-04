@@ -175,7 +175,7 @@ SUB_INFO_URL = $EN_KEY
 # cron: 定时任务（分 时 日 月 周）
 # force: 强制覆盖
 # restart: 下载后重启 OpenClash
-DOWNLOAD_FILE = url=https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/cfg/yaml/Custom_Clash_Full.yaml, path=/etc/openclash/config/Custom_Clash_Full.yaml, cron=0 6 * * *, force=true, restart=true
+DOWNLOAD_FILE = url=https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/cfg/yaml/Custom_Clash_Full.yaml, path=/etc/openclash/config/Custom_Clash_Full.yaml, cron=0 6 * * *, force=true, restart=false
 
 # ==========================================================
 # 覆写配置 - 自动替换订阅链接
