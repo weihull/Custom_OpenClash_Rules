@@ -1212,7 +1212,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/WiFiCall.yaml"
+    url: "https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/WiFiCall.yaml"
     interval: 86400
   Google_CN:
     type: http
