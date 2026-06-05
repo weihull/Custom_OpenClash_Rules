@@ -1,0 +1,787 @@
+# =========================================
+#                锚点配置
+# =========================================
+anchor:
+  # 代理提供商锚点
+  BaseProvider: &BaseProvider
+    type: http
+    interval: 86400
+    path: ./proxies/Sub-Store.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: https://cp.cloudflare.com/generate_204
+
+  # 策略组类型模板
+  BaseURL-test: &BaseURL-test
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - Sub-Store
+
+  # 策略组代理列表模板
+  # 🚀 手动选择
+  SelectManual: &SelectManual
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+
+  # 💬 即时通讯
+  SelectHKFirst: &SelectHKFirst
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+
+  # 📞 WiFiCall
+  SelectWiFiCall: &SelectWiFiCall
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🇬🇧 英国节点
+      - 🇺🇸 美国节点
+      - 🇭🇰 香港节点
+      - 🇸🇬 新加坡节点
+      - 🇯🇵 日本节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+      - 🎯 全球直连
+
+  # 🚀 GitHub
+  SelectGitHub: &SelectGitHub
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+      - 🎯 全球直连
+
+  # 🤖 ChatGPT
+  SelectSGFirst: &SelectSGFirst
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+
+  # 🎥 AppleTV+
+  SelectAppleTV: &SelectAppleTV
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+      - 🎯 全球直连
+
+  # 🎥 Emby
+  SelectMediaDirect: &SelectMediaDirect
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+
+  # 📺 Bahamut
+  SelectBahamut: &SelectBahamut
+    type: select
+    proxies:
+      - 🇼🇸 台湾节点
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+  # 🍎 苹果服务
+  SelectDirectFirst: &SelectDirectFirst
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+
+  # ⏬ PT站点
+  SelectPT: &SelectPT
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇷🇺 俄罗斯节点
+      - 🇦🇺 澳大利亚节点
+      - 🇮🇩 印度尼西亚节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🌐 其他地区
+      - 🏠 家宽节点
+      - 🐢 低倍率节点
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+
+  # 🔀 非标端口
+  SelectPort: &SelectPort
+    type: select
+    proxies:
+      - 🐟 漏网之鱼
+      - 🎯 全球直连
+
+  # 🎯 全球直连
+  SelectDirect: &SelectDirect
+    type: select
+    proxies:
+      - DIRECT
+
+  # 规则提供者模板
+  domain: &domain
+    type: http
+    behavior: domain
+    format: mrs
+    interval: 86400
+
+  ip: &ip
+    type: http
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+
+  class: &class
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+
+# =========================================
+#              代理提供商
+# =========================================
+proxy-providers:
+  Sub-Store:
+    <<: *BaseProvider
+    url: "在此填入你的订阅链接"
+
+# =========================================
+#             策略组配置
+# =========================================
+proxy-groups:
+
+  - name: 🚀 手动选择
+    <<: *SelectManual
+
+  - name: ♻️ 自动选择
+    <<: *BaseURL-test
+
+  - name: 💬 即时通讯
+    <<: *SelectHKFirst
+
+  - name: 📞 WiFiCall
+    <<: *SelectWiFiCall
+
+  - name: 🌐 社交媒体
+    <<: *SelectHKFirst
+
+  - name: 📞 Talkatone
+    <<: *SelectHKFirst
+
+  - name: 🚀 GitHub
+    <<: *SelectGitHub
+
+  - name: 🤖 ChatGPT
+    <<: *SelectSGFirst
+
+  - name: 🤖 Copilot
+    <<: *SelectSGFirst
+
+  - name: 🤖 AI服务
+    <<: *SelectSGFirst
+
+  - name: 🎶 TikTok
+    <<: *SelectHKFirst
+
+  - name: 📹 YouTube
+    <<: *SelectSGFirst
+
+  - name: 🎥 Netflix
+    <<: *SelectSGFirst
+
+  - name: 🎥 DisneyPlus
+    <<: *SelectSGFirst
+
+  - name: 🎥 HBO
+    <<: *SelectSGFirst
+
+  - name: 🎥 PrimeVideo
+    <<: *SelectSGFirst
+
+  - name: 🎥 AppleTV+
+    <<: *SelectAppleTV
+
+  - name: 🎥 Emby
+    <<: *SelectMediaDirect
+
+  - name: 🎻 Spotify
+    <<: *SelectMediaDirect
+
+  - name: 📺 Bahamut
+    <<: *SelectBahamut
+
+  - name: 🌎 国外媒体
+    <<: *SelectHKFirst
+
+  - name: 🛒 国外电商
+    <<: *SelectHKFirst
+
+  - name: 📢 谷歌FCM
+    <<: *SelectHKFirst
+
+  - name: 🇬 谷歌服务
+    <<: *SelectHKFirst
+
+  - name: 🍎 苹果服务
+    <<: *SelectDirectFirst
+
+  - name: Ⓜ️ 微软服务
+    <<: *SelectDirectFirst
+
+  - name: 💾 OneDrive
+    <<: *SelectDirectFirst
+
+  - name: 💳 PayPal
+    <<: *SelectDirectFirst
+
+  - name: 🎮 游戏平台
+    <<: *SelectDirectFirst
+
+  - name: 🎮 Steam
+    <<: *SelectDirectFirst
+
+  - name: ⏬ PT站点
+    <<: *SelectPT
+
+  - name: 🚀 测速工具
+    <<: *SelectDirectFirst
+
+  - name: 🐟 漏网之鱼
+    <<: *SelectDirectFirst
+
+  - name: 🔀 非标端口
+    <<: *SelectPort
+
+  - name: 🇭🇰 香港节点
+    <<: *BaseURL-test
+    filter: >-
+      🇭🇰|港|\bHK(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|hk|Hong Kong|HongKong|hongkong|HONG KONG|HONGKONG|深港|HKG|九龙|Kowloon|新界|沙田|荃湾|葵涌
+
+  - name: 🇺🇸 美国节点
+    <<: *BaseURL-test
+    filter: >-
+      🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|纽纽|亚特兰大|迈阿密|华盛顿|\bUS(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|United States|UnitedStates|UNITED STATES|USA|America|AMERICA|JFK|EWR|IAD|ATL|ORD|MIA|NYC|LAX|SFO|SEA|DFW|SJC
+
+  - name: 🇯🇵 日本节点
+    <<: *BaseURL-test
+    filter: >-
+      🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|\bJP(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Japan|JAPAN|JPN|NRT|HND|KIX|TYO|OSA|关西|Kansai|KANSAI
+
+  - name: 🇸🇬 新加坡节点
+    <<: *BaseURL-test
+    filter: >-
+      🇸🇬|新加坡|坡|狮城|\bSG(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Singapore|SINGAPORE|SIN
+
+  - name: 🇼🇸 台湾节点
+    <<: *BaseURL-test
+    filter: >-
+      🇹🇼|🇼🇸|台|新北|彰化|\bTW(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Taiwan|TAIWAN|TWN|TPE|ROC
+
+  - name: 🇰🇷 韩国节点
+    <<: *BaseURL-test
+    filter: >-
+      🇰🇷|\bKR(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Korea|KOREA|KOR|首尔|韩|韓|春川|Chuncheon|ICN
+
+  - name: 🇨🇦 加拿大节点
+    <<: *BaseURL-test
+    filter: >-
+      🇨🇦|加拿大|\bCA(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Canada|CANADA|CAN|渥太华|温哥华|卡尔加里|蒙特利尔|Montreal|YVR|YYZ|YUL
+
+  - name: 🇬🇧 英国节点
+    <<: *BaseURL-test
+    filter: >-
+      🇬🇧|英国|Britain|United Kingdom|UNITED KINGDOM|England|伦敦|曼彻斯特|Manchester|\bUK(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|GBR|LHR|MAN
+
+  - name: 🇫🇷 法国节点
+    <<: *BaseURL-test
+    filter: >-
+      🇫🇷|法国|\bFR(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|France|FRANCE|FRA|巴黎|马赛|Marseille|CDG|MRS
+
+  - name: 🇩🇪 德国节点
+    <<: *BaseURL-test
+    filter: >-
+      🇩🇪|德国|Germany|GERMANY|\bDE(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|DEU|柏林|法兰克福|慕尼黑|Munich|MUC
+
+  - name: 🇳🇱 荷兰节点
+    <<: *BaseURL-test
+    filter: >-
+      🇳🇱|荷兰|Netherlands|NETHERLANDS|\bNL(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|NLD|阿姆斯特丹|AMS
+
+  - name: 🇹🇷 土耳其节点
+    <<: *BaseURL-test
+    filter: >-
+      🇹🇷|土耳其|Turkey|TURKEY|Türkiye|\bTR(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|TUR|IST|ANK
+
+  - name: 🇷🇺 俄罗斯节点
+    <<: *BaseURL-test
+    filter: >-
+      🇷🇺|(?<!白)俄罗斯|(?<!白)俄|莫斯科|圣彼得堡|新西伯利亚|海参崴|符拉迪沃斯托克|哈巴罗夫斯克|伯力|\bRU(?:[-_ ]?\d+)?\b|Russia
+
+  - name: 🇦🇺 澳大利亚节点
+    <<: *BaseURL-test
+    filter: >-
+      🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|布里斯班|珀斯|Australia|Sydney|Melbourne|Brisbane|Perth|\bAU(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|AUS|SYD|MEL
+
+  - name: 🇮🇩 印度尼西亚节点
+    <<: *BaseURL-test
+    filter: >-
+      🇮🇩|印尼|印度尼西亚|雅加达|Jakarta|Indonesia|\bID(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|IDN|JKT
+
+  - name: 🇮🇳 印度节点
+    <<: *BaseURL-test
+    filter: >-
+      🇮🇳|印度|孟买|新德里|班加罗尔|India|Mumbai|Delhi|Bangalore|\bIN(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|IND|BOM|DEL
+
+  - name: 🇲🇾 马来西亚节点
+    <<: *BaseURL-test
+    filter: >-
+      🇲🇾|马来西亚|吉隆坡|Kuala Lumpur|Malaysia|\bMY(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|MYS|KUL
+
+  - name: 🌐 其他地区
+    <<: *BaseURL-test
+    filter: >-
+      ^(?!.*(港|\bHK|hk|Hong Kong|美|\bUS|United States|USA|日本|\bJP|Japan|新加坡|\bSG|Singapore|台|\bTW|Taiwan|\bKR|Korea|韩|加拿大|\bCA|Canada|英国|\bUK|Britain|法国|\bFR|France|德国|\bDE|Germany|荷兰|\bNL|Netherlands|土耳其|\bTR|Turkey|俄罗斯|\bRU|Russia|澳大利亚|澳洲|\bAU|Australia|印尼|印度尼西亚|雅加达|\bID|Indonesia|印度|孟买|\bIN|India|马来西亚|吉隆坡|\bMY|Malaysia|家宽|住宅|Residential|低倍)).*
+
+  - name: 🏠 家宽节点
+    <<: *BaseURL-test
+    filter: >-
+      家宽|家庭宽带|住宅|Residential
+
+  - name: 🐢 低倍率节点
+    <<: *BaseURL-test
+    filter: >-
+      低倍率|低倍|(?<![\d\.])0?\.\d+(?![0-9])(?:x|倍)?|倍率[:： ]?0?\.\d+
+
+  - name: 🎯 全球直连
+    <<: *SelectDirect
+
+# =========================================
+#                 规则配置
+# =========================================
+rules:
+  - RULE-SET,WiFiCall,📞 WiFiCall
+  - GEOSITE,private,🎯 全球直连
+  - GEOIP,private,🎯 全球直连,no-resolve
+  - RULE-SET,Custom_Direct_Domain,🎯 全球直连
+  - RULE-SET,Custom_Direct_IP,🎯 全球直连,no-resolve
+  - RULE-SET,Custom_Proxy_Domain,🚀 手动选择
+  - RULE-SET,Custom_Proxy_IP,🚀 手动选择,no-resolve
+  - RULE-SET,Google_CN,🎯 全球直连
+  - RULE-SET,Game_CN,🎯 全球直连
+  - RULE-SET,Steam_CDN_Domain,🎯 全球直连
+  - RULE-SET,Steam_CDN_IP,🎯 全球直连,no-resolve
+  - RULE-SET,Game_Download,🎯 全球直连
+  - RULE-SET,Public_Tracker,🎯 全球直连
+  - RULE-SET,Communication,💬 即时通讯
+  - RULE-SET,Social_Media,🌐 社交媒体
+  - RULE-SET,Telegram_IP,💬 即时通讯,no-resolve
+  - RULE-SET,Twitter_IP,🌐 社交媒体,no-resolve
+  - RULE-SET,Facebook_IP,🌐 社交媒体,no-resolve
+  - RULE-SET,Talkatone,📞 Talkatone
+  - RULE-SET,OpenAI,🤖 ChatGPT
+  - RULE-SET,OneDrive,💾 OneDrive
+  - RULE-SET,Bing,🤖 Copilot
+  - RULE-SET,AI,🤖 AI服务
+  - RULE-SET,GitHub,🚀 GitHub
+  - RULE-SET,Speedtest,🚀 测速工具
+  - RULE-SET,Steam,🎮 Steam
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,Apple_TV,🎥 AppleTV+
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,Google,🇬 谷歌服务
+  - RULE-SET,Google_IP,🇬 谷歌服务,no-resolve
+  - RULE-SET,TikTok,🎶 TikTok
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,Netflix_IP,🎥 Netflix,no-resolve
+  - RULE-SET,Disney,🎥 DisneyPlus
+  - RULE-SET,HBO,🎥 HBO
+  - RULE-SET,PrimeVideo,🎥 PrimeVideo
+  - RULE-SET,Emby,🎥 Emby
+  - RULE-SET,Spotify,🎻 Spotify
+  - RULE-SET,Bahamut,📺 Bahamut
+  - RULE-SET,Games,🎮 游戏平台
+  - RULE-SET,Entertainment,🌎 国外媒体
+  - RULE-SET,PT,⏬ PT站点
+  - RULE-SET,PayPal,💳 PayPal
+  - RULE-SET,Ecommerce,🛒 国外电商
+  - RULE-SET,GFW,🚀 手动选择
+  - RULE-SET,CN_Domain,🎯 全球直连
+  - RULE-SET,CN_IP,🎯 全球直连,no-resolve
+  - RULE-SET,Custom_Port_Direct,🔀 非标端口
+  - MATCH,🐟 漏网之鱼
+
+# =========================================
+#            规则提供者
+# =========================================
+rule-providers:
+
+  Custom_Direct_Domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Direct_Domain.mrs"
+
+  Custom_Direct_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Direct_IP.mrs"
+
+  Custom_Proxy_Domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Proxy_Domain.mrs"
+
+  Custom_Proxy_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Proxy_IP.mrs"
+
+  Steam_CDN_Domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Steam_CDN_Domain.mrs"
+
+  Steam_CDN_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Steam_CDN_IP.mrs"
+
+  Custom_Port_Direct:
+    <<: *class
+    url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Port_Direct.yaml"
+
+  WiFiCall:
+    <<: *class
+    url: "https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/WiFiCall.yaml"
+
+  Google_CN:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-cn.mrs"
+
+  Game_CN:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games@cn.mrs"
+
+  Game_Download:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download.mrs"
+
+  Public_Tracker:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-public-tracker.mrs"
+
+  Communication:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-communication.mrs"
+
+  Social_Media:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-social-media-!cn.mrs"
+
+  Talkatone:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/talkatone.mrs"
+
+  OpenAI:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs"
+
+  OneDrive:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"
+
+  Bing:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.mrs"
+
+  AI:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
+
+  GitHub:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"
+
+  Speedtest:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-speedtest.mrs"
+
+  Steam:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"
+
+  YouTube:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
+
+  Apple_TV:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-tvplus.mrs"
+
+  Apple:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
+
+  Microsoft:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
+
+  GoogleFCM:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/googlefcm.mrs"
+
+  Google:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"
+
+  TikTok:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"
+
+  Netflix:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"
+
+  Disney:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs"
+
+  HBO:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/hbo.mrs"
+
+  PrimeVideo:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/primevideo.mrs"
+
+  Emby:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-emby.mrs"
+
+  Spotify:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"
+
+  Bahamut:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bahamut.mrs"
+
+  Games:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games.mrs"
+
+  Entertainment:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-entertainment.mrs"
+
+  PT:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-pt.mrs"
+
+  PayPal:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"
+
+  Ecommerce:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ecommerce.mrs"
+
+  GFW:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"
+
+  CN_Domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
+
+  Telegram_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
+
+  Twitter_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.mrs"
+
+  Facebook_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/facebook.mrs"
+
+  Google_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"
+
+  Netflix_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"
+
+  CN_IP:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
