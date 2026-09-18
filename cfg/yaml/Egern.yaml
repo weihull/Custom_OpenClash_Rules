@@ -1,6 +1,7 @@
 # =========================================
 #   Egern 配置文件 (基于 Overwrite-Clash.yaml 修改)
 #   适用于 Egern App (iOS / Android / macOS)
+#   规则集均托管于本仓库 rule/egern/ 目录
 # =========================================
 
 # =========================================
@@ -13,6 +14,7 @@ allow_external_connections: false
 vif_only: true
 block_quic: true
 hide_vpn_icon: true
+close_connections_on_policy_change: true
 include_all_networks: false
 include_apns: false
 include_cellular_services: false
@@ -26,16 +28,24 @@ bypass_tunnel_proxy:
   - "172.16.0.0/12"
   - "127.0.0.0/8"
   - "100.64.0.0/10"
+  - "fd00::/8"
+  - "fe80::/10"
 
 hijack_dns:
-  - "*:53"
+  - '*'
 
 real_ip_domains:
   - "*.lan"
   - "*.local"
   - "*.push.apple.com"
-  - "+.msftconnecttest.com"
-  - "+.msftncsi.com"
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - "lancache.steamcontent.com"
+  - "*.srv.nintendo.net"
+  - "*.stun.playstation.net"
+  - "xbox.*.microsoft.com"
+  - "*.xboxlive.com"
+  - "stun.l.google.com"
 
 proxy_latency_test_url: https://www.apple.com/library/test/success.html
 direct_latency_test_url: http://connectivitycheck.gstatic.com/generate_204
@@ -56,23 +66,19 @@ dns:
       - https://dns.alidns.com/dns-query
   forward:
     - proxy_rule_set:
-        match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/apple-cn.yaml
+        match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_Domain.yaml
         value: 国内
         update_interval: 86400
     - proxy_rule_set:
-        match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/microsoft-cn.yaml
+        match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple.yaml
         value: 国内
         update_interval: 86400
     - proxy_rule_set:
-        match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/cn.yaml
+        match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Microsoft.yaml
         value: 国内
         update_interval: 86400
-    - proxy_rule_set:
-        match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/geolocation-cn.yaml
-        value: 国内
-        update_interval: 86400
-    - domain_wildcard:
-        match: "*"
+    - wildcard:
+        match: '*'
         value: 国外
   hosts:
     doh.pub:
@@ -101,6 +107,7 @@ policy_groups:
       type: select
       urls:
         - https://在此填入你的订阅链接
+      filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量|倍率).)+$'
       update_interval: 86400
       hidden: true
 
@@ -169,20 +176,19 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
   - select:
-      name: 📞 WiFiCall
+      name: 🌐 社交媒体
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
-        - 🇬🇧 英国节点
-        - 🇺🇸 美国节点
         - 🇭🇰 香港节点
-        - 🇸🇬 新加坡节点
+        - 🇺🇸 美国节点
         - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
         - 🇼🇸 台湾节点
         - 🇰🇷 韩国节点
         - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
         - 🇫🇷 法国节点
         - 🇩🇪 德国节点
         - 🇳🇱 荷兰节点
@@ -195,11 +201,113 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
-        - 🎯 全球直连
-
 
   - select:
-      name: 🌐 社交媒体
+      name: 🎶 TikTok
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🌎 国外媒体
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🛒 国外电商
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 📢 谷歌FCM
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🇬 谷歌服务
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -279,7 +387,6 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
   - select:
       name: 🤖 Copilot
       policies:
@@ -305,7 +412,6 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
-
 
   - select:
       name: 🤖 AI服务
@@ -333,34 +439,6 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
-  - select:
-      name: 🎶 TikTok
-      policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-
-
   - select:
       name: 📹 YouTube
       policies:
@@ -386,7 +464,6 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
-
 
   - select:
       name: 🎥 Netflix
@@ -414,9 +491,60 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
   - select:
       name: 🎥 DisneyPlus
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎥 HBO
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎥 PrimeVideo
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -471,6 +599,61 @@ policy_groups:
 
 
   - select:
+      name: 📞 WiFiCall
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇬🇧 英国节点
+        - 🇺🇸 美国节点
+        - 🇭🇰 香港节点
+        - 🇸🇬 新加坡节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+        - 🎯 全球直连
+
+
+  - select:
+      name: 📞 Talkatone
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
       name: 🎥 Emby
       policies:
         - 🚀 手动选择
@@ -496,7 +679,6 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
-
 
   - select:
       name: 🎻 Spotify
@@ -527,84 +709,11 @@ policy_groups:
 
 
   - select:
-      name: 🌎 国外媒体
+      name: 📺 Bahamut
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
         - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-
-
-  - select:
-      name: 📢 谷歌FCM
-      policies:
         - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-
-
-  - select:
-      name: 🇬 谷歌服务
-      policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 🎯 全球直连
 
 
   - select:
@@ -634,7 +743,6 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
   - select:
       name: Ⓜ️ 微软服务
       policies:
@@ -661,7 +769,6 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
-
 
   - select:
       name: 💾 OneDrive
@@ -690,6 +797,32 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
+  - select:
+      name: 💳 PayPal
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
 
   - select:
       name: 🎮 游戏平台
@@ -718,7 +851,6 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
   - select:
       name: 🎮 Steam
       policies:
@@ -746,7 +878,6 @@ policy_groups:
         - 🏠 家宽节点
         - 🐢 低倍率节点
 
-
   - select:
       name: 🚀 测速工具
       policies:
@@ -773,6 +904,34 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
+
+
+  - select:
+      name: ⏬ PT站点
+      policies:
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🎯 全球直连
 
 
   - select:
@@ -1033,15 +1192,25 @@ policy_groups:
 #                 规则配置
 # =========================================
 rules:
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/private.yaml
+  - domain_suffix:
+      match: lan
       policy: 🎯 全球直连
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/private-ip.yaml
+  - domain_suffix:
+      match: local
       policy: 🎯 全球直连
-      update_interval: 86400
-      no_resolve: true
+  - ip_cidr:
+      match: 192.168.0.0/16
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 10.0.0.0/8
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 172.16.0.0/12
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 127.0.0.0/8
+      policy: 🎯 全球直连
+
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/WiFiCall.yaml
       policy: 📞 WiFiCall
@@ -1060,11 +1229,11 @@ rules:
       policy: 🚀 手动选择
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/google.yaml
-      policy: 🇬 谷歌服务
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google_CN.yaml
+      policy: 🎯 全球直连
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/games-cn.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Game_CN.yaml
       policy: 🎯 全球直连
       update_interval: 86400
   - rule_set:
@@ -1077,141 +1246,1488 @@ rules:
       update_interval: 86400
       no_resolve: true
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/apple-cn.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Game_Download.yaml
       policy: 🎯 全球直连
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/microsoft-cn.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Public_Tracker.yaml
       policy: 🎯 全球直连
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/ai.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Communication.yaml
+      policy: 💬 即时通讯
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Social_Media.yaml
+      policy: 🌐 社交媒体
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Telegram_IP.yaml
+      policy: 💬 即时通讯
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Twitter_IP.yaml
+      policy: 🌐 社交媒体
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Facebook_IP.yaml
+      policy: 🌐 社交媒体
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Talkatone.yaml
+      policy: 📞 Talkatone
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OpenAI.yaml
+      policy: 🤖 ChatGPT
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OneDrive.yaml
+      policy: 💾 OneDrive
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Bing.yaml
+      policy: 🤖 Copilot
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/AI.yaml
       policy: 🤖 AI服务
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/github.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GitHub.yaml
       policy: 🚀 GitHub
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/telegram.yaml
-      policy: 💬 即时通讯
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Speedtest.yaml
+      policy: 🚀 测速工具
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/telegram-ip.yaml
-      policy: 💬 即时通讯
-      update_interval: 86400
-      no_resolve: true
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/twitter.yaml
-      policy: 🌐 社交媒体
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam.yaml
+      policy: 🎮 Steam
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/twitter-ip.yaml
-      policy: 🌐 社交媒体
-      update_interval: 86400
-      no_resolve: true
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/facebook.yaml
-      policy: 🌐 社交媒体
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/facebook-ip.yaml
-      policy: 🌐 社交媒体
-      update_interval: 86400
-      no_resolve: true
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/meta.yaml
-      policy: 🌐 社交媒体
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/threads.yaml
-      policy: 🌐 社交媒体
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/youtube.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/YouTube.yaml
       policy: 📹 YouTube
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/apple.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple_TV.yaml
+      policy: 🎥 AppleTV+
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple.yaml
       policy: 🍎 苹果服务
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/apple-ip.yaml
-      policy: 🍎 苹果服务
-      update_interval: 86400
-      no_resolve: true
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/microsoft.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Microsoft.yaml
       policy: Ⓜ️ 微软服务
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/microsoft-ip.yaml
-      policy: Ⓜ️ 微软服务
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GoogleFCM.yaml
+      policy: 📢 谷歌FCM
       update_interval: 86400
-      no_resolve: true
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/google-ip.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google.yaml
+      policy: 🇬 谷歌服务
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google_IP.yaml
       policy: 🇬 谷歌服务
       update_interval: 86400
       no_resolve: true
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/tiktok.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/TikTok.yaml
       policy: 🎶 TikTok
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/tiktok-ip.yaml
-      policy: 🎶 TikTok
-      update_interval: 86400
-      no_resolve: true
-  - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/Netflix.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Netflix.yaml
       policy: 🎥 Netflix
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/Disney.yaml
-      policy: 🎥 DisneyPlus
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/Emby.yaml
-      policy: 🎥 Emby
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/Spotify.yaml
-      policy: 🎻 Spotify
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/Game.yaml
-      policy: 🎮 游戏平台
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/steam.yaml
-      policy: 🎮 Steam
-      update_interval: 86400
-  - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/steam-ip.yaml
-      policy: 🎮 Steam
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Netflix_IP.yaml
+      policy: 🎥 Netflix
       update_interval: 86400
       no_resolve: true
   - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/ProxyGFW.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Disney.yaml
+      policy: 🎥 DisneyPlus
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/HBO.yaml
+      policy: 🎥 HBO
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PrimeVideo.yaml
+      policy: 🎥 PrimeVideo
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Emby.yaml
+      policy: 🎥 Emby
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Spotify.yaml
+      policy: 🎻 Spotify
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Bahamut.yaml
+      policy: 📺 Bahamut
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Games.yaml
+      policy: 🎮 游戏平台
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Entertainment.yaml
+      policy: 🌎 国外媒体
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PT.yaml
+      policy: ⏬ PT站点
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PayPal.yaml
+      policy: 💳 PayPal
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Ecommerce.yaml
+      policy: 🛒 国外电商
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GFW.yaml
       policy: 🚀 手动选择
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/oo226/egern-config/refs/heads/main/Routing/Foreign/Proxy.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Geolocation_Not_CN.yaml
       policy: 🚀 手动选择
       update_interval: 86400
   - rule_set:
-      match: https://raw.githubusercontent.com/frostmage1250/egern-config/main/rules/cn.yaml
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_Domain.yaml
       policy: 🎯 全球直连
       update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_IP.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+      no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Port_Direct.yaml
       policy: 🔀 非标端口
       update_interval: 86400
-  - geoip:
-      match: CN
+  - default:
+      policy: 🐟 漏网之鱼
+
+default_subscription_group: 节点订阅
+default_proxy_group: 🐟 漏网之鱼
+
+      update_interval: 86400
+      hidden: true
+
+  - auto_test:
+      name: ♻️ 自动选择
+      policies:
+        - 节点订阅
+      flatten: true
+      interval: 300
+      tolerance: 50
+      timeout: 5
+
+  - select:
+      name: 🚀 手动选择
+      policies:
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎯 全球直连
+      policies:
+        - DIRECT
+
+  - select:
+      name: 💬 即时通讯
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🌐 社交媒体
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎶 TikTok
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🌎 国外媒体
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🛒 国外电商
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 📢 谷歌FCM
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🇬 谷歌服务
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
+      name: 🚀 GitHub
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+        - 🎯 全球直连
+
+
+  - select:
+      name: 🤖 ChatGPT
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🤖 Copilot
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🤖 AI服务
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 📹 YouTube
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎥 Netflix
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎥 DisneyPlus
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎥 HBO
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎥 PrimeVideo
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
+      name: 🎥 AppleTV+
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+        - 🎯 全球直连
+
+
+  - select:
+      name: 📞 WiFiCall
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇬🇧 英国节点
+        - 🇺🇸 美国节点
+        - 🇭🇰 香港节点
+        - 🇸🇬 新加坡节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+        - 🎯 全球直连
+
+
+  - select:
+      name: 📞 Talkatone
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
+      name: 🎥 Emby
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🎯 全球直连
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎻 Spotify
+      policies:
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🎯 全球直连
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
+      name: 📺 Bahamut
+      policies:
+        - 🇼🇸 台湾节点
+        - 🚀 手动选择
+        - 🎯 全球直连
+
+
+  - select:
+      name: 🍎 苹果服务
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: Ⓜ️ 微软服务
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 💾 OneDrive
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 💳 PayPal
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎮 游戏平台
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🎮 Steam
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+  - select:
+      name: 🚀 测速工具
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
+      name: ⏬ PT站点
+      policies:
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🎯 全球直连
+
+
+  - select:
+      name: 🐟 漏网之鱼
+      policies:
+        - 🎯 全球直连
+        - 🚀 手动选择
+        - ♻️ 自动选择
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇸🇬 新加坡节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
+
+  - select:
+      name: 🔀 非标端口
+      policies:
+        - 🐟 漏网之鱼
+        - 🎯 全球直连
+
+  - auto_test:
+      name: 🇭🇰 香港节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇭🇰|港|\bHK(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|hk|Hong Kong|HongKong|hongkong|HONG KONG|HONGKONG|深港|HKG|九龙|Kowloon|新界|沙田|荃湾|葵涌"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇺🇸 美国节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|纽纽|亚特兰大|迈阿密|华盛顿|\bUS(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|United States|UnitedStates|UNITED STATES|USA|America|AMERICA|JFK|EWR|IAD|ATL|ORD|MIA|NYC|LAX|SFO|SEA|DFW|SJC"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇯🇵 日本节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|\bJP(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Japan|JAPAN|JPN|NRT|HND|KIX|TYO|OSA|关西|Kansai|KANSAI"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇸🇬 新加坡节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇸🇬|新加坡|坡|狮城|\bSG(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Singapore|SINGAPORE|SIN"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇼🇸 台湾节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇹🇼|🇼🇸|台|新北|彰化|\bTW(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Taiwan|TAIWAN|TWN|TPE|ROC"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇰🇷 韩国节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇰🇷|\bKR(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Korea|KOREA|KOR|首尔|韩|韓|春川|Chuncheon|ICN"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇨🇦 加拿大节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇨🇦|加拿大|\bCA(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|Canada|CANADA|CAN|渥太华|温哥华|卡尔加里|蒙特利尔|Montreal|YVR|YYZ|YUL"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇬🇧 英国节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇬🇧|英国|Britain|United Kingdom|UNITED KINGDOM|England|伦敦|曼彻斯特|Manchester|\bUK(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|GBR|LHR|MAN"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇫🇷 法国节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇫🇷|法国|\bFR(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|France|FRANCE|FRA|巴黎|马赛|Marseille|CDG|MRS"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇩🇪 德国节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇩🇪|德国|Germany|GERMANY|\bDE(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|DEU|柏林|法兰克福|慕尼黑|Munich|MUC"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇳🇱 荷兰节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇳🇱|荷兰|Netherlands|NETHERLANDS|\bNL(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|NLD|阿姆斯特丹|AMS"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇹🇷 土耳其节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇹🇷|土耳其|Turkey|TURKEY|Türkiye|\bTR(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|TUR|IST|ANK"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇷🇺 俄罗斯节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇷🇺|(?<!白)俄罗斯|(?<!白)俄|莫斯科|圣彼得堡|新西伯利亚|海参崴|符拉迪沃斯托克|哈巴罗夫斯克|伯力|\bRU(?:[-_ ]?\d+)?\b|Russia"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇦🇺 澳大利亚节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|布里斯班|珀斯|Australia|Sydney|Melbourne|Brisbane|Perth|\bAU(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|AUS|SYD|MEL"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇮🇩 印度尼西亚节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇮🇩|印尼|印度尼西亚|雅加达|Jakarta|Indonesia|\bID(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|IDN|JKT"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇮🇳 印度节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇮🇳|印度|孟买|新德里|班加罗尔|India|Mumbai|Delhi|Bangalore|\bIN(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|IND|BOM|DEL"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🇲🇾 马来西亚节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "🇲🇾|马来西亚|吉隆坡|Kuala Lumpur|Malaysia|\bMY(?:[-_ ]?\d+(?:[-_ ]?[A-Za-z]{2,})?)?\b|MYS|KUL"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🌐 其他地区
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "^(?!.*(港|\bHK|hk|Hong Kong|美|\bUS|United States|USA|日本|\bJP|Japan|新加坡|\bSG|Singapore|台|\bTW|Taiwan|\bKR|Korea|韩|加拿大|\bCA|Canada|英国|\bUK|Britain|法国|\bFR|France|德国|\bDE|Germany|荷兰|\bNL|Netherlands|土耳其|\bTR|Turkey|俄罗斯|\bRU|Russia|澳大利亚|澳洲|\bAU|Australia|印尼|印度尼西亚|雅加达|\bID|Indonesia|印度|孟买|\bIN|India|马来西亚|吉隆坡|\bMY|Malaysia|家宽|住宅|Residential|低倍)).*"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🏠 家宽节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "家宽|家庭宽带|住宅|Residential"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+  - auto_test:
+      name: 🐢 低倍率节点
+      policies:
+        - 节点订阅
+      flatten: true
+      filter: "低倍率|低倍|(?<![\d\.])0?\.\d+(?![0-9])(?:x|倍)?|倍率[:： ]?0?\.\d+"
+      interval: 300
+      tolerance: 50
+      timeout: 5
+      hidden: true
+
+# =========================================
+#                 规则配置
+# =========================================
+rules:
+  - domain_suffix:
+      match: lan
       policy: 🎯 全球直连
+  - domain_suffix:
+      match: local
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 192.168.0.0/16
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 10.0.0.0/8
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 172.16.0.0/12
+      policy: 🎯 全球直连
+  - ip_cidr:
+      match: 127.0.0.0/8
+      policy: 🎯 全球直连
+
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/WiFiCall.yaml
+      policy: 📞 WiFiCall
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Direct_Domain.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Direct_IP.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
       no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Proxy_Domain.yaml
+      policy: 🚀 手动选择
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google_CN.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Game_CN.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam_CDN_Domain.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam_CDN_IP.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Game_Download.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Public_Tracker.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Communication.yaml
+      policy: 💬 即时通讯
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Social_Media.yaml
+      policy: 🌐 社交媒体
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Telegram_IP.yaml
+      policy: 💬 即时通讯
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Twitter_IP.yaml
+      policy: 🌐 社交媒体
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Facebook_IP.yaml
+      policy: 🌐 社交媒体
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Talkatone.yaml
+      policy: 📞 Talkatone
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OpenAI.yaml
+      policy: 🤖 ChatGPT
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OneDrive.yaml
+      policy: 💾 OneDrive
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Bing.yaml
+      policy: 🤖 Copilot
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/AI.yaml
+      policy: 🤖 AI服务
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GitHub.yaml
+      policy: 🚀 GitHub
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Speedtest.yaml
+      policy: 🚀 测速工具
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam.yaml
+      policy: 🎮 Steam
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/YouTube.yaml
+      policy: 📹 YouTube
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple_TV.yaml
+      policy: 🎥 AppleTV+
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple.yaml
+      policy: 🍎 苹果服务
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Microsoft.yaml
+      policy: Ⓜ️ 微软服务
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GoogleFCM.yaml
+      policy: 📢 谷歌FCM
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google.yaml
+      policy: 🇬 谷歌服务
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google_IP.yaml
+      policy: 🇬 谷歌服务
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/TikTok.yaml
+      policy: 🎶 TikTok
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Netflix.yaml
+      policy: 🎥 Netflix
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Netflix_IP.yaml
+      policy: 🎥 Netflix
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Disney.yaml
+      policy: 🎥 DisneyPlus
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/HBO.yaml
+      policy: 🎥 HBO
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PrimeVideo.yaml
+      policy: 🎥 PrimeVideo
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Emby.yaml
+      policy: 🎥 Emby
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Spotify.yaml
+      policy: 🎻 Spotify
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Bahamut.yaml
+      policy: 📺 Bahamut
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Games.yaml
+      policy: 🎮 游戏平台
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Entertainment.yaml
+      policy: 🌎 国外媒体
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PT.yaml
+      policy: ⏬ PT站点
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PayPal.yaml
+      policy: 💳 PayPal
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Ecommerce.yaml
+      policy: 🛒 国外电商
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GFW.yaml
+      policy: 🚀 手动选择
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Geolocation_Not_CN.yaml
+      policy: 🚀 手动选择
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_Domain.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_IP.yaml
+      policy: 🎯 全球直连
+      update_interval: 86400
+      no_resolve: true
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Port_Direct.yaml
+      policy: 🔀 非标端口
+      update_interval: 86400
   - default:
       policy: 🐟 漏网之鱼
 
