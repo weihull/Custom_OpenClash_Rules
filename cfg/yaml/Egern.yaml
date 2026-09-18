@@ -7,6 +7,11 @@ http_port: 3080
 socks_port: 3090
 allow_external_connections: false
 vif_only: true
+vif_excluded_routes:
+  - "10.0.0.0/8"
+  - "172.16.0.0/12"
+  - "192.168.0.0/16"
+  - "100.64.0.0/10"
 block_quic: true
 hide_vpn_icon: true
 close_connections_on_policy_change: true
@@ -23,7 +28,7 @@ bypass_tunnel_proxy:
   - "fe80::/10"
 
 hijack_dns:
-  - '*'
+  - "*:53"
 
 real_ip_domains:
   - "*.lan"
@@ -65,7 +70,7 @@ dns:
         match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Microsoft.yaml
         value: 国内
         update_interval: 86400
-    - wildcard:
+    - domain_wildcard:
         match: '*'
         value: 国外
   hosts:
@@ -87,10 +92,9 @@ dns:
   public_ip_lookup_url: https://ifconfig.me/ip
 
 policy_groups:
-  - select:
+  - external:
       name: 节点订阅
-      policies:
-        - DIRECT
+      type: select
       urls: []
       filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量|倍率).)+$'
       update_interval: 86400
