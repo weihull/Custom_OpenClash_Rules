@@ -119,6 +119,17 @@ jobs:
                 git add "$mrs_file"
                 git commit -m "chore(rules): auto generate $(basename "$mrs_file") from $(basename "$yaml_file")"
               else
+      - name: Generate Egern Rules
+        run: |
+          echo "Generating native Egern rulesets..."
+          python py/generate_egern_rules.py
+          if [[ -n $(git status --porcelain rule/egern/) ]]; then
+            git add rule/egern/
+            git commit -m "chore(rules): auto update native Egern rulesets"
+          else
+            echo "No changes in rule/egern/, skip commit."
+          fi
+
                 echo "No changes in ${mrs_file}, skip commit."
               fi
             else

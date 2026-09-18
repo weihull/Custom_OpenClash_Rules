@@ -63,6 +63,10 @@ dns:
         value: 国内
         update_interval: 86400
     - proxy_rule_set:
+        match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Direct_Domain.yaml
+        value: 国内
+        update_interval: 86400
+    - proxy_rule_set:
         match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple.yaml
         value: 国内
         update_interval: 86400
@@ -70,6 +74,15 @@ dns:
         match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Microsoft.yaml
         value: 国内
         update_interval: 86400
+    - domain_suffix:
+        match: cn
+        value: 国内
+    - domain_suffix:
+        match: local
+        value: system
+    - domain_suffix:
+        match: lan
+        value: system
     - domain_wildcard:
         match: '*'
         value: 国外
@@ -136,6 +149,13 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
+
+  - select:
+      name: 广告拦截
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+      policies:
+        - REJECT
+        - DIRECT
 
   - select:
       name: 全球直连
@@ -445,6 +465,34 @@ policy_groups:
         - 🌐 其他地区
         - 🏠 家宽节点
         - 🐢 低倍率节点
+
+  - select:
+      name: Claude
+      icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/claude.png
+      policies:
+        - 手动选择
+        - 自动选择
+        - 🇸🇬 新加坡节点
+        - 🇭🇰 香港节点
+        - 🇺🇸 美国节点
+        - 🇯🇵 日本节点
+        - 🇼🇸 台湾节点
+        - 🇰🇷 韩国节点
+        - 🇨🇦 加拿大节点
+        - 🇬🇧 英国节点
+        - 🇫🇷 法国节点
+        - 🇩🇪 德国节点
+        - 🇳🇱 荷兰节点
+        - 🇹🇷 土耳其节点
+        - 🇷🇺 俄罗斯节点
+        - 🇦🇺 澳大利亚节点
+        - 🇮🇩 印度尼西亚节点
+        - 🇮🇳 印度节点
+        - 🇲🇾 马来西亚节点
+        - 🌐 其他地区
+        - 🏠 家宽节点
+        - 🐢 低倍率节点
+
 
   - select:
       name: Copilot
@@ -1234,6 +1282,14 @@ policy_groups:
       hidden: true
 
 rules:
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Advertising.yaml
+      policy: 广告拦截
+      update_interval: 86400
+
+      hidden: true
+
+rules:
   - domain_suffix:
       match: lan
       policy: 全球直连
@@ -1321,6 +1377,10 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Talkatone.yaml
       policy: Talkatone
+      update_interval: 86400
+  - rule_set:
+      match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Claude.yaml
+      policy: Claude
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OpenAI.yaml

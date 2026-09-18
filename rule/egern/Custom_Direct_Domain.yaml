@@ -616,7 +616,7 @@ domain_suffix_set:
   - zuobiao.press
   - zysou.com
   - zzz-log-upload-os.hoyoverse.com
-domain_wildcard_set:
-  - "*m-team*"
-  - "*quickconnect*"
-  - "*synology*"
+domain_keyword_set:
+  - m-team
+  - quickconnect
+  - synology
