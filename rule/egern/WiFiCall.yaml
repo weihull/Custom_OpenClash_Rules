@@ -1,0 +1,41 @@
+no_resolve: true
+domain_suffix_set:
+  - gspe1-ssl.ls.apple.com
+  - entsrv-uk.vodafone.com
+  - vuk-gto.prod.ondemandconnectivity.com
+  - ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+  - attwifi.com
+  - vzwwo.com
+  - pub.3gppnetwork.org
+domain_keyword_set:
+  - epdg.epc.mnc030.mcc234
+  - epdg.epc.mnc033.mcc234
+  - epdg.epc.mnc015.mcc234
+  - epdg.epc.mnc020.mcc234
+  - epdg.epc.mnc010.mcc234
+  - epdg.epc.mnc240.mcc310
+  - epdg.epc.mnc260.mcc310
+  - epdg.epc.mnc410.mcc310
+  - epdg.epc.mnc150.mcc311
+  - epdg.epc.mnc480.mcc311
+  - epdg.epc.mnc012.mcc311
+  - epdg.epc.mnc000.mcc454
+  - epdg.epc.mnc003.mcc454
+  - epdg.epc.mnc004.mcc454
+  - epdg.epc.mnc006.mcc454
+  - epdg.epc.mnc017.mcc454
+  - epdg.epc.mnc012.mcc454
+  - epdg.epc.mnc013.mcc454
+  - epdg.epc.mnc001.mcc525
+  - epdg.epc.mnc002.mcc525
+  - epdg.epc.mnc005.mcc525
+  - epdg.epc.mnc003.mcc525
+  - epdg.epc.mnc005.mcc530
+  - epdg.epc.mnc024.mcc530
+ip_cidr_set:
+  - 31.94.0.0/16
+  - 46.68.0.0/17
+  - 88.82.0.0/19
+  - 87.194.0.0/16
+  - 208.54.0.0/16
+  - 66.94.0.0/19
