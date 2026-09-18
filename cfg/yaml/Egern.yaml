@@ -1286,10 +1286,7 @@ rules:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Advertising.yaml
       policy: 广告拦截
       update_interval: 86400
-
       hidden: true
-
-rules:
   - domain_suffix:
       match: lan
       policy: 全球直连
