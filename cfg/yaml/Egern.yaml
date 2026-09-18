@@ -102,7 +102,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: ♻️ 自动选择
+      name: 自动选择
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
       policies:
         - 节点订阅
@@ -112,889 +112,889 @@ policy_groups:
       timeout: 5
 
   - select:
-      name: 🚀 手动选择
+      name: 手动选择
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
       policies:
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎯 全球直连
+      name: 全球直连
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
       policies:
         - DIRECT
 
   - select:
-      name: 💬 即时通讯
+      name: 即时通讯
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🌐 社交媒体
+      name: 社交媒体
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎶 TikTok
+      name: TikTok
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🌎 国外媒体
+      name: 国外媒体
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🛒 国外电商
+      name: 国外电商
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Amazon.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 📢 谷歌FCM
+      name: 谷歌FCM
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🇬 谷歌服务
+      name: 谷歌服务
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
 
   - select:
-      name: 📞 WiFiCall
+      name: WiFiCall
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇬🇧 英国节点
-        - 🇺🇸 美国节点
-        - 🇭🇰 香港节点
-        - 🇸🇬 新加坡节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-        - 🎯 全球直连
+        - 手动选择
+        - 自动选择
+        - 英国节点
+        - 美国节点
+        - 香港节点
+        - 新加坡节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
+        - 全球直连
 
 
   - select:
-      name: 📞 Talkatone
+      name: Talkatone
       icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/talkatone.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
 
   - select:
-      name: 🚀 GitHub
+      name: GitHub
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-        - 🎯 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
+        - 全球直连
 
 
   - select:
-      name: 🤖 ChatGPT
+      name: ChatGPT
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🤖 Copilot
+      name: Copilot
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Copilot.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🤖 AI服务
+      name: AI服务
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
 
   - select:
-      name: 📹 YouTube
+      name: YouTube
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎥 Netflix
+      name: Netflix
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎥 DisneyPlus
+      name: DisneyPlus
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎥 HBO
+      name: HBO
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎥 PrimeVideo
+      name: PrimeVideo
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Prime_Video.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎥 AppleTV+
+      name: AppleTV+
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_TV_Plus.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇸🇬 新加坡节点
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-        - 🎯 全球直连
+        - 手动选择
+        - 自动选择
+        - 新加坡节点
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
+        - 全球直连
 
 
   - select:
-      name: 🎥 Emby
+      name: Emby
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🎯 全球直连
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 全球直连
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎻 Spotify
+      name: Spotify
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
       policies:
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🎯 全球直连
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 全球直连
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
 
   - select:
-      name: 📺 Bahamut
+      name: Bahamut
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
       policies:
-        - 🇼🇸 台湾节点
-        - 🚀 手动选择
-        - 🎯 全球直连
+        - 台湾节点
+        - 手动选择
+        - 全球直连
 
 
   - select:
-      name: 🍎 苹果服务
+      name: 苹果服务
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: Ⓜ️ 微软服务
+      name: 微软服务
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 💾 OneDrive
+      name: OneDrive
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 💳 PayPal
+      name: PayPal
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎮 游戏平台
+      name: 游戏平台
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🎮 Steam
+      name: Steam
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
   - select:
-      name: 🚀 测速工具
+      name: 测速工具
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
 
   - select:
-      name: ⏬ PT站点
+      name: PT站点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png
       policies:
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🎯 全球直连
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
+        - 手动选择
+        - 自动选择
+        - 全球直连
 
 
   - select:
-      name: 🐟 漏网之鱼
+      name: 漏网之鱼
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
       policies:
-        - 🎯 全球直连
-        - 🚀 手动选择
-        - ♻️ 自动选择
-        - 🇭🇰 香港节点
-        - 🇺🇸 美国节点
-        - 🇯🇵 日本节点
-        - 🇸🇬 新加坡节点
-        - 🇼🇸 台湾节点
-        - 🇰🇷 韩国节点
-        - 🇨🇦 加拿大节点
-        - 🇬🇧 英国节点
-        - 🇫🇷 法国节点
-        - 🇩🇪 德国节点
-        - 🇳🇱 荷兰节点
-        - 🇹🇷 土耳其节点
-        - 🇷🇺 俄罗斯节点
-        - 🇦🇺 澳大利亚节点
-        - 🇮🇩 印度尼西亚节点
-        - 🇮🇳 印度节点
-        - 🇲🇾 马来西亚节点
-        - 🌐 其他地区
-        - 🏠 家宽节点
-        - 🐢 低倍率节点
+        - 全球直连
+        - 手动选择
+        - 自动选择
+        - 香港节点
+        - 美国节点
+        - 日本节点
+        - 新加坡节点
+        - 台湾节点
+        - 韩国节点
+        - 加拿大节点
+        - 英国节点
+        - 法国节点
+        - 德国节点
+        - 荷兰节点
+        - 土耳其节点
+        - 俄罗斯节点
+        - 澳大利亚节点
+        - 印度尼西亚节点
+        - 印度节点
+        - 马来西亚节点
+        - 其他地区
+        - 家宽节点
+        - 低倍率节点
 
 
   - select:
-      name: 🔀 非标端口
+      name: 非标端口
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
       policies:
-        - 🐟 漏网之鱼
-        - 🎯 全球直连
+        - 漏网之鱼
+        - 全球直连
 
   - auto_test:
-      name: 🇭🇰 香港节点
+      name: 香港节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
       policies:
         - 节点订阅
@@ -1006,7 +1006,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇺🇸 美国节点
+      name: 美国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
       policies:
         - 节点订阅
@@ -1018,7 +1018,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇯🇵 日本节点
+      name: 日本节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
       policies:
         - 节点订阅
@@ -1030,7 +1030,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇸🇬 新加坡节点
+      name: 新加坡节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
       policies:
         - 节点订阅
@@ -1042,7 +1042,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇼🇸 台湾节点
+      name: 台湾节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
       policies:
         - 节点订阅
@@ -1054,7 +1054,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇰🇷 韩国节点
+      name: 韩国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
       policies:
         - 节点订阅
@@ -1066,7 +1066,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇨🇦 加拿大节点
+      name: 加拿大节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
       policies:
         - 节点订阅
@@ -1078,7 +1078,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇬🇧 英国节点
+      name: 英国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
       policies:
         - 节点订阅
@@ -1090,7 +1090,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇫🇷 法国节点
+      name: 法国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/France.png
       policies:
         - 节点订阅
@@ -1102,7 +1102,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇩🇪 德国节点
+      name: 德国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
       policies:
         - 节点订阅
@@ -1114,7 +1114,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇳🇱 荷兰节点
+      name: 荷兰节点
       icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Netherlands.png
       policies:
         - 节点订阅
@@ -1126,7 +1126,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇹🇷 土耳其节点
+      name: 土耳其节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
       policies:
         - 节点订阅
@@ -1138,7 +1138,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇷🇺 俄罗斯节点
+      name: 俄罗斯节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png
       policies:
         - 节点订阅
@@ -1150,7 +1150,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇦🇺 澳大利亚节点
+      name: 澳大利亚节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Australia.png
       policies:
         - 节点订阅
@@ -1162,7 +1162,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇮🇩 印度尼西亚节点
+      name: 印度尼西亚节点
       icon: https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-squared/id.png
       policies:
         - 节点订阅
@@ -1174,7 +1174,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇮🇳 印度节点
+      name: 印度节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
       policies:
         - 节点订阅
@@ -1186,7 +1186,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🇲🇾 马来西亚节点
+      name: 马来西亚节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png
       policies:
         - 节点订阅
@@ -1198,7 +1198,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🌐 其他地区
+      name: 其他地区
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
       policies:
         - 节点订阅
@@ -1210,7 +1210,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🏠 家宽节点
+      name: 家宽节点
       icon: https://raw.githubusercontent.com/Vbaethon/HOMOMIX/main/Icon/Color/Home.png
       policies:
         - 节点订阅
@@ -1222,7 +1222,7 @@ policy_groups:
       hidden: true
 
   - auto_test:
-      name: 🐢 低倍率节点
+      name: 低倍率节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
       policies:
         - 节点订阅
@@ -1236,229 +1236,229 @@ policy_groups:
 rules:
   - domain_suffix:
       match: lan
-      policy: 🎯 全球直连
+      policy: 全球直连
   - domain_suffix:
       match: local
-      policy: 🎯 全球直连
+      policy: 全球直连
   - ip_cidr:
       match: 192.168.0.0/16
-      policy: 🎯 全球直连
+      policy: 全球直连
   - ip_cidr:
       match: 10.0.0.0/8
-      policy: 🎯 全球直连
+      policy: 全球直连
   - ip_cidr:
       match: 172.16.0.0/12
-      policy: 🎯 全球直连
+      policy: 全球直连
   - ip_cidr:
       match: 127.0.0.0/8
-      policy: 🎯 全球直连
+      policy: 全球直连
 
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/WiFiCall.yaml
-      policy: 📞 WiFiCall
+      policy: WiFiCall
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Direct_Domain.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Direct_IP.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Proxy_Domain.yaml
-      policy: 🚀 手动选择
+      policy: 手动选择
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google_CN.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Game_CN.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam_CDN_Domain.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam_CDN_IP.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Game_Download.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Public_Tracker.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Communication.yaml
-      policy: 💬 即时通讯
+      policy: 即时通讯
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Social_Media.yaml
-      policy: 🌐 社交媒体
+      policy: 社交媒体
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Telegram_IP.yaml
-      policy: 💬 即时通讯
+      policy: 即时通讯
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Twitter_IP.yaml
-      policy: 🌐 社交媒体
+      policy: 社交媒体
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Facebook_IP.yaml
-      policy: 🌐 社交媒体
+      policy: 社交媒体
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Talkatone.yaml
-      policy: 📞 Talkatone
+      policy: Talkatone
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OpenAI.yaml
-      policy: 🤖 ChatGPT
+      policy: ChatGPT
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Bing.yaml
-      policy: 🤖 Copilot
+      policy: Copilot
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/AI.yaml
-      policy: 🤖 AI服务
+      policy: AI服务
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GitHub.yaml
-      policy: 🚀 GitHub
+      policy: GitHub
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Speedtest.yaml
-      policy: 🚀 测速工具
+      policy: 测速工具
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Steam.yaml
-      policy: 🎮 Steam
+      policy: Steam
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Games.yaml
-      policy: 🎮 游戏平台
+      policy: 游戏平台
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/YouTube.yaml
-      policy: 📹 YouTube
+      policy: YouTube
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple_TV.yaml
-      policy: 🎥 AppleTV+
+      policy: AppleTV+
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Netflix.yaml
-      policy: 🎥 Netflix
+      policy: Netflix
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Netflix_IP.yaml
-      policy: 🎥 Netflix
+      policy: Netflix
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Disney.yaml
-      policy: 🎥 DisneyPlus
+      policy: DisneyPlus
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/HBO.yaml
-      policy: 🎥 HBO
+      policy: HBO
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PrimeVideo.yaml
-      policy: 🎥 PrimeVideo
+      policy: PrimeVideo
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Emby.yaml
-      policy: 🎥 Emby
+      policy: Emby
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Spotify.yaml
-      policy: 🎻 Spotify
+      policy: Spotify
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Bahamut.yaml
-      policy: 📺 Bahamut
+      policy: Bahamut
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Entertainment.yaml
-      policy: 🌎 国外媒体
+      policy: 国外媒体
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/OneDrive.yaml
-      policy: 💾 OneDrive
+      policy: OneDrive
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Apple.yaml
-      policy: 🍎 苹果服务
+      policy: 苹果服务
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Microsoft.yaml
-      policy: Ⓜ️ 微软服务
+      policy: 微软服务
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GoogleFCM.yaml
-      policy: 📢 谷歌FCM
+      policy: 谷歌FCM
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google.yaml
-      policy: 🇬 谷歌服务
+      policy: 谷歌服务
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Google_IP.yaml
-      policy: 🇬 谷歌服务
+      policy: 谷歌服务
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/TikTok.yaml
-      policy: 🎶 TikTok
+      policy: TikTok
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PT.yaml
-      policy: ⏬ PT站点
+      policy: PT站点
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/PayPal.yaml
-      policy: 💳 PayPal
+      policy: PayPal
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Ecommerce.yaml
-      policy: 🛒 国外电商
+      policy: 国外电商
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/GFW.yaml
-      policy: 🚀 手动选择
+      policy: 手动选择
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Geolocation_Not_CN.yaml
-      policy: 🚀 手动选择
+      policy: 手动选择
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_Domain.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_IP.yaml
-      policy: 🎯 全球直连
+      policy: 全球直连
       update_interval: 86400
       no_resolve: true
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Custom_Port_Direct.yaml
-      policy: 🔀 非标端口
+      policy: 非标端口
       update_interval: 86400
   - default:
-      policy: 🐟 漏网之鱼
+      policy: 漏网之鱼
 
 default_subscription_group: 节点订阅
-default_proxy_group: 🐟 漏网之鱼
+default_proxy_group: 漏网之鱼
