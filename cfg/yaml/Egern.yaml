@@ -94,6 +94,7 @@ dns:
 policy_groups:
   - external:
       name: 节点订阅
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
       type: select
       urls: []
       filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量|倍率).)+$'
@@ -102,6 +103,7 @@ policy_groups:
 
   - auto_test:
       name: ♻️ 自动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
       policies:
         - 节点订阅
       flatten: true
@@ -111,6 +113,7 @@ policy_groups:
 
   - select:
       name: 🚀 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
       policies:
         - ♻️ 自动选择
         - 🇭🇰 香港节点
@@ -136,11 +139,13 @@ policy_groups:
 
   - select:
       name: 🎯 全球直连
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
       policies:
         - DIRECT
 
   - select:
       name: 💬 即时通讯
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -167,6 +172,7 @@ policy_groups:
 
   - select:
       name: 🌐 社交媒体
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -193,6 +199,7 @@ policy_groups:
 
   - select:
       name: 🎶 TikTok
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -219,6 +226,7 @@ policy_groups:
 
   - select:
       name: 🌎 国外媒体
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -245,6 +253,7 @@ policy_groups:
 
   - select:
       name: 🛒 国外电商
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Amazon.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -271,6 +280,7 @@ policy_groups:
 
   - select:
       name: 📢 谷歌FCM
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -297,6 +307,7 @@ policy_groups:
 
   - select:
       name: 🇬 谷歌服务
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -324,6 +335,7 @@ policy_groups:
 
   - select:
       name: 📞 WiFiCall
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -352,6 +364,7 @@ policy_groups:
 
   - select:
       name: 📞 Talkatone
+      icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/talkatone.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -379,6 +392,7 @@ policy_groups:
 
   - select:
       name: 🚀 GitHub
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -407,6 +421,7 @@ policy_groups:
 
   - select:
       name: 🤖 ChatGPT
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -433,6 +448,7 @@ policy_groups:
 
   - select:
       name: 🤖 Copilot
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Copilot.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -459,6 +475,7 @@ policy_groups:
 
   - select:
       name: 🤖 AI服务
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -486,6 +503,7 @@ policy_groups:
 
   - select:
       name: 📹 YouTube
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -512,6 +530,7 @@ policy_groups:
 
   - select:
       name: 🎥 Netflix
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -538,6 +557,7 @@ policy_groups:
 
   - select:
       name: 🎥 DisneyPlus
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -564,6 +584,7 @@ policy_groups:
 
   - select:
       name: 🎥 HBO
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -590,6 +611,7 @@ policy_groups:
 
   - select:
       name: 🎥 PrimeVideo
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Prime_Video.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -616,6 +638,7 @@ policy_groups:
 
   - select:
       name: 🎥 AppleTV+
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_TV_Plus.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -644,6 +667,7 @@ policy_groups:
 
   - select:
       name: 🎥 Emby
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -671,6 +695,7 @@ policy_groups:
 
   - select:
       name: 🎻 Spotify
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
       policies:
         - 🚀 手动选择
         - ♻️ 自动选择
@@ -699,6 +724,7 @@ policy_groups:
 
   - select:
       name: 📺 Bahamut
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
       policies:
         - 🇼🇸 台湾节点
         - 🚀 手动选择
@@ -707,6 +733,7 @@ policy_groups:
 
   - select:
       name: 🍎 苹果服务
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -734,6 +761,7 @@ policy_groups:
 
   - select:
       name: Ⓜ️ 微软服务
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -761,6 +789,7 @@ policy_groups:
 
   - select:
       name: 💾 OneDrive
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -788,6 +817,7 @@ policy_groups:
 
   - select:
       name: 💳 PayPal
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -815,6 +845,7 @@ policy_groups:
 
   - select:
       name: 🎮 游戏平台
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -842,6 +873,7 @@ policy_groups:
 
   - select:
       name: 🎮 Steam
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -869,6 +901,7 @@ policy_groups:
 
   - select:
       name: 🚀 测速工具
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -897,6 +930,7 @@ policy_groups:
 
   - select:
       name: ⏬ PT站点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png
       policies:
         - 🇭🇰 香港节点
         - 🇺🇸 美国节点
@@ -925,6 +959,7 @@ policy_groups:
 
   - select:
       name: 🐟 漏网之鱼
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
       policies:
         - 🎯 全球直连
         - 🚀 手动选择
@@ -953,12 +988,14 @@ policy_groups:
 
   - select:
       name: 🔀 非标端口
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
       policies:
         - 🐟 漏网之鱼
         - 🎯 全球直连
 
   - auto_test:
       name: 🇭🇰 香港节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
       policies:
         - 节点订阅
       flatten: true
@@ -970,6 +1007,7 @@ policy_groups:
 
   - auto_test:
       name: 🇺🇸 美国节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
       policies:
         - 节点订阅
       flatten: true
@@ -981,6 +1019,7 @@ policy_groups:
 
   - auto_test:
       name: 🇯🇵 日本节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
       policies:
         - 节点订阅
       flatten: true
@@ -992,6 +1031,7 @@ policy_groups:
 
   - auto_test:
       name: 🇸🇬 新加坡节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
       policies:
         - 节点订阅
       flatten: true
@@ -1003,6 +1043,7 @@ policy_groups:
 
   - auto_test:
       name: 🇼🇸 台湾节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
       policies:
         - 节点订阅
       flatten: true
@@ -1014,6 +1055,7 @@ policy_groups:
 
   - auto_test:
       name: 🇰🇷 韩国节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
       policies:
         - 节点订阅
       flatten: true
@@ -1025,6 +1067,7 @@ policy_groups:
 
   - auto_test:
       name: 🇨🇦 加拿大节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
       policies:
         - 节点订阅
       flatten: true
@@ -1036,6 +1079,7 @@ policy_groups:
 
   - auto_test:
       name: 🇬🇧 英国节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
       policies:
         - 节点订阅
       flatten: true
@@ -1047,6 +1091,7 @@ policy_groups:
 
   - auto_test:
       name: 🇫🇷 法国节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/France.png
       policies:
         - 节点订阅
       flatten: true
@@ -1058,6 +1103,7 @@ policy_groups:
 
   - auto_test:
       name: 🇩🇪 德国节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
       policies:
         - 节点订阅
       flatten: true
@@ -1069,6 +1115,7 @@ policy_groups:
 
   - auto_test:
       name: 🇳🇱 荷兰节点
+      icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Netherlands.png
       policies:
         - 节点订阅
       flatten: true
@@ -1080,6 +1127,7 @@ policy_groups:
 
   - auto_test:
       name: 🇹🇷 土耳其节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
       policies:
         - 节点订阅
       flatten: true
@@ -1091,6 +1139,7 @@ policy_groups:
 
   - auto_test:
       name: 🇷🇺 俄罗斯节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png
       policies:
         - 节点订阅
       flatten: true
@@ -1102,6 +1151,7 @@ policy_groups:
 
   - auto_test:
       name: 🇦🇺 澳大利亚节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Australia.png
       policies:
         - 节点订阅
       flatten: true
@@ -1113,6 +1163,7 @@ policy_groups:
 
   - auto_test:
       name: 🇮🇩 印度尼西亚节点
+      icon: https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-squared/id.png
       policies:
         - 节点订阅
       flatten: true
@@ -1124,6 +1175,7 @@ policy_groups:
 
   - auto_test:
       name: 🇮🇳 印度节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
       policies:
         - 节点订阅
       flatten: true
@@ -1135,6 +1187,7 @@ policy_groups:
 
   - auto_test:
       name: 🇲🇾 马来西亚节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png
       policies:
         - 节点订阅
       flatten: true
@@ -1146,6 +1199,7 @@ policy_groups:
 
   - auto_test:
       name: 🌐 其他地区
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
       policies:
         - 节点订阅
       flatten: true
@@ -1157,6 +1211,7 @@ policy_groups:
 
   - auto_test:
       name: 🏠 家宽节点
+      icon: https://raw.githubusercontent.com/Vbaethon/HOMOMIX/main/Icon/Color/Home.png
       policies:
         - 节点订阅
       flatten: true
@@ -1168,6 +1223,7 @@ policy_groups:
 
   - auto_test:
       name: 🐢 低倍率节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
       policies:
         - 节点订阅
       flatten: true
