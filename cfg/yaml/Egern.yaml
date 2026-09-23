@@ -7,11 +7,8 @@ http_port: 3080
 socks_port: 3090
 allow_external_connections: false
 vif_only: false
-vif_excluded_routes:
-  - "10.0.0.0/8"
-  - "172.16.0.0/12"
-  - "192.168.0.0/16"
-  - "100.64.0.0/10"
+vif_hairpin_addresses:
+  - 10.7.0.1
 block_quic: true
 hide_vpn_icon: true
 close_connections_on_policy_change: false
@@ -1281,6 +1278,9 @@ policy_groups:
       hidden: true
 
 rules:
+  - ip_cidr:
+      match: 10.7.0.1/32
+      policy: 全球直连
   - rule_set:
       match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/Advertising.yaml
       policy: 广告拦截
@@ -1306,6 +1306,9 @@ rules:
       policy: 全球直连
   - ip_cidr:
       match: 100.64.0.0/10
+      policy: 全球直连
+  - ip_cidr:
+      match: 224.0.0.0/24
       policy: 全球直连
   - ip_cidr6:
       match: "fd00::/8"
