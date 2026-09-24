@@ -1,4 +1,4 @@
-# Egern 配置 — 基于 Overwrite-Clash.yaml 规则集，按 Egern 原生格式编写
+﻿# Egern 配置 — 基于 Overwrite-Clash.yaml 规则集，按 Egern 原生格式编写
 # 规则集托管于本仓库 rule/egern/ 目录
 # 导入后通过 App 内「订阅」添加节点，无需手动编辑配置
 
@@ -111,7 +111,7 @@ policy_groups:
       update_interval: 86400
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 自动选择
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
       policies:
@@ -1038,7 +1038,7 @@ policy_groups:
         - 漏网之鱼
         - 全球直连
 
-  - auto_test:
+  - smart:
       name: 🇭🇰 香港节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
       policies:
@@ -1050,7 +1050,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇺🇸 美国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
       policies:
@@ -1062,7 +1062,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇯🇵 日本节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
       policies:
@@ -1074,7 +1074,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇸🇬 新加坡节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
       policies:
@@ -1086,7 +1086,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇼🇸 台湾节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
       policies:
@@ -1098,7 +1098,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇰🇷 韩国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
       policies:
@@ -1110,7 +1110,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇨🇦 加拿大节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
       policies:
@@ -1122,7 +1122,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇬🇧 英国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
       policies:
@@ -1134,7 +1134,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇫🇷 法国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/France.png
       policies:
@@ -1146,7 +1146,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇩🇪 德国节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
       policies:
@@ -1158,7 +1158,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇳🇱 荷兰节点
       icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Netherlands.png
       policies:
@@ -1170,7 +1170,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇹🇷 土耳其节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
       policies:
@@ -1182,7 +1182,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇷🇺 俄罗斯节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png
       policies:
@@ -1194,7 +1194,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇦🇺 澳大利亚节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Australia.png
       policies:
@@ -1206,7 +1206,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇮🇩 印度尼西亚节点
       icon: https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-squared/id.png
       policies:
@@ -1218,7 +1218,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇮🇳 印度节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
       policies:
@@ -1230,7 +1230,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🇲🇾 马来西亚节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png
       policies:
@@ -1242,7 +1242,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🌐 其他地区
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
       policies:
@@ -1254,7 +1254,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🏠 家宽节点
       icon: https://raw.githubusercontent.com/Vbaethon/HOMOMIX/main/Icon/Color/Home.png
       policies:
@@ -1266,7 +1266,7 @@ policy_groups:
       timeout: 5
       hidden: true
 
-  - auto_test:
+  - smart:
       name: 🐢 低倍率节点
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
       policies:
@@ -1543,8 +1543,35 @@ modules:
   enabled: true
 - url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
   enabled: true
+- url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/Telegram.yaml
+  env:
+    CLIENT: Telegram
+  enabled: true
+- url: https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule
+  enabled: true
+- url: https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.yaml
+  compat_arguments:
+    Type: Translate
+  enabled: true
+- url: https://reven.lovebabyforever.workers.dev/reven/iTunes.sgmodule
+  enabled: true
+- name: Revenuecat-系列解锁合集
+  url: http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js/_end_/Reheji.sgmodule?type=qx-rewrite&target=surge-module&del=true&jqEnabled=true
+  enabled: true
+- url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/surge-loon-to-egern.yaml
+  enabled: true
+- url: https://ddgksf2013.top/module/ScriptHub.Egern.sgmodule
+  enabled: true
 
 scriptings:
+- schedule:
+    name: TestFlight监控
+    cron: '* * * * * ?'
+    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/TestFlight.js
+    env:
+      TF: 在此填入你的TestFlight账号ID
+    timeout: 120
+    disabled: true
 - generic:
     name: 聚合热搜小组件
     script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/HSW_Widget.JS
@@ -1566,6 +1593,23 @@ scriptings:
 - generic:
     name: 彩票开奖小组件
     script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/Lottery-Widget.JS
+- generic:
+    name: 和风天气小组件
+    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/Weather_Widget.JS
+    timeout: 120
+- generic:
+    name: 机场订阅小组件
+    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/Sub_Widget.JS
+    timeout: 120
+- generic:
+    name: 网络诊断雷达小组件
+    script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Network-Pro.js
+- generic:
+    name: ip数据中心小组件
+    script_url: https://raw.githubusercontent.com/shadowlynx319/Egern/main/ip-dch.js
+- generic:
+    name: 测试网络下载速度小组件
+    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/NetSpeed_Widget.JS
 
 widgets:
 - name: 油价查询
@@ -1582,6 +1626,16 @@ widgets:
   script_name: 聚合热搜小组件
 - name: 财联社
   script_name: 财联社小组件
+- name: 和风天气
+  script_name: 和风天气小组件
+- name: 机场订阅
+  script_name: 机场订阅小组件
+- name: 网络诊断雷达
+  script_name: 网络诊断雷达小组件
+- name: IP数据中心
+  script_name: ip数据中心小组件
+- name: 测试网络下载速度
+  script_name: 测试网络下载速度小组件
 
 default_subscription_group: 节点订阅
 default_proxy_group: 漏网之鱼
