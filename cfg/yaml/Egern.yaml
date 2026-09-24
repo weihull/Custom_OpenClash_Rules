@@ -42,7 +42,7 @@ real_ip_domains:
   - "*.xboxlive.com"
   - "stun.l.google.com"
 
-proxy_latency_test_url: https://www.apple.com/library/test/success.html
+proxy_latency_test_url: https://cp.cloudflare.com/generate_204
 direct_latency_test_url: https://www.qq.com
 udp_latency_test_url: google.com@8.8.8.8
 
