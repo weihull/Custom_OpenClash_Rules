@@ -102,8 +102,10 @@ dns:
       - 223.5.5.5
       - 223.6.6.6
   proxy_nameservers:
-    - 223.5.5.5
-    - 119.29.29.29
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
   public_ip_lookup_url: https://ifconfig.me/ip
 
 policy_groups:
