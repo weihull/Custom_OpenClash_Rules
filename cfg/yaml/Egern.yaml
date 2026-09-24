@@ -12,6 +12,8 @@ vif_hairpin_addresses:
 block_quic: true
 hide_vpn_icon: true
 close_connections_on_policy_change: false
+geoip_db_url: https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
+asn_db_url: https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
 
 bypass_tunnel_proxy:
   - "*.local"
