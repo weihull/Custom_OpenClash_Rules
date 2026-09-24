@@ -57,6 +57,8 @@ dns:
     国内:
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
+      - https://doh.360.cn/dns-query
+      - https://223.6.6.6/dns-query
   forward:
     - proxy_rule_set:
         match: https://raw.githubusercontent.com/weihull/Custom_OpenClash_Rules/main/rule/egern/CN_Domain.yaml
@@ -100,7 +102,8 @@ dns:
       - 223.5.5.5
       - 223.6.6.6
   proxy_nameservers:
-    - 国内
+    - 223.5.5.5
+    - 119.29.29.29
   public_ip_lookup_url: https://ifconfig.me/ip
 
 policy_groups:
