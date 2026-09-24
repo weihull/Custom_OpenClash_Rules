@@ -54,10 +54,12 @@ dns:
     国外:
       - https://dns.cloudflare.com/dns-query
       - https://dns.google/dns-query
+      - https://1.1.1.1/dns-query
+      - https://8.8.8.8/dns-query
     国内:
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
-      - https://doh.360.cn/dns-query
+      - https://1.12.12.12/dns-query
       - https://223.6.6.6/dns-query
   forward:
     - proxy_rule_set:
